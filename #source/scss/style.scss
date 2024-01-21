@@ -1,0 +1,289 @@
+// Обнуление стилей
+
+@import '../scss/nullstyle.scss';
+
+// Шрифты
+
+@import '../../fonts/Gilroy/stylesheet.css';
+
+// Переменные
+
+@import '../scss/variables.scss';
+
+// Стилизация body
+
+body{
+    font-family: $main-font;
+}
+
+// Стилизация навигации шапки сайта
+
+.container{
+    max-width: 1400px;
+    height: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header{
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../img/header-img-darken.png");
+}
+
+.nav{
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    grid-template-rows: auto;
+    .nav__brand{
+        display: block;
+        display: flex;
+        align-items: center;
+        .nav__brand-half-1{
+            font-size: 30px;
+            font-weight: 600;
+            color: white;
+        }
+        .nav__brand-half-2{
+            margin-top: auto;
+            font-size: 25px;
+            font-weight: 600;
+            color: $main-color;
+            transition: font-size .3s ease;
+        }
+        &:hover .nav__brand-half-2{
+            // font-size: 30px;
+            animation: brand-anim 1.3s ease infinite;
+        }
+        @keyframes brand-anim {
+            0%,100%{
+                font-size: 25px;
+            }
+            50%{
+                font-size: 30px;
+            }
+        }
+    }
+    .nav__navigation{
+        
+        .nav__list{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            .nav__link{
+                font-weight: 500;
+                font-size: 17px;
+                color:$base-color-light;
+                position: relative;
+                cursor: pointer;
+                &::before{
+                    position: absolute;
+                    bottom: -4px;
+                    right: 0;
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 2px;
+                    background-color: $main-bg;
+                    transition: width .3s ease;
+                }
+                &:hover::before{
+                    left: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .nav__contacts{
+        display: flex;
+        gap: 20px;
+        .nav__contact{
+            min-width: 100px;
+            display: flex;
+            align-items: center;
+            border: 1px solid rgb(187, 187, 187);
+            border-radius: 10px;
+            padding-right: 7px;
+            gap: 0px;
+            cursor: pointer;
+            &.nav__contact-1{
+                background-color: $main-bg;
+                border: 1px solid $main-bg;
+            }
+            .nav__icon-contact{
+                width: 35px;
+                height: 35px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &::before{
+                    content: '\f0e0';
+                    font-size: 20px;
+                    color: white;
+                    font-weight: 900;
+                    font-family: $awesome-font;
+                }
+                &.nav__icon-contact-1::before{
+                    content: '\f095';
+                }
+            }
+            .nav__text-contact{
+                color: white;
+            }
+        }
+    }
+}
+
+.title{
+    color:$main-color;
+    font-size: 40px;
+    max-width: 500px;
+    text-wrap: balance;
+    &.title_mt{
+        margin-top: 50px;
+    }
+}
+
+.benefits{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &.benefits_mt{
+        margin-top: 20px;
+    }
+    .benefits__item{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        .benefits__icon{
+            width: 40px;
+            height: 40px;
+            background-color: $secondary-bg;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &::before{
+                content: '\f5a2';
+                font-size: 20px;
+                color: white;
+                font-weight: 900;
+                font-family: $awesome-font;
+            }
+            &.benefits__icon-2::before{
+                content: '\f7d9';
+            }
+            &.benefits__icon-3::before{
+                content: '\f2b5';
+            }
+        }
+        .benefits__title{
+            color:$base-color-light;
+            font-weight: 500;
+        }
+    }
+}
+
+.btn-request{
+    display: inline-flex;
+    gap: 10px;
+    border-bottom: 3px solid $main-bg;
+    color:$base-color-light;
+    cursor: pointer;
+    .btn-request__arrow{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-request__title{
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .btn-request__arrow::before{
+        content: '\f105';
+        font-size: 20px;
+        color: white;
+        font-weight: 900;
+        font-family: $awesome-font;
+        transition: all .3s ease;
+    }
+    &.btn-request_mt{
+        margin-top: 20px;
+    }
+    &:hover .btn-request__arrow::before{
+        content: '\f178';
+        margin-left: 10px;
+    }
+}
+
+.conditions{
+    display: flex;
+    gap: 20px;
+    &.conditions_mt{
+        margin-top: 60px;
+    }
+    .conditions__item{
+        flex: 1 1 25%;
+        padding: 15px;
+        background-color: rgba(139, 139, 139, 0.3);
+        backdrop-filter: blur(2px);
+        border-radius: 10px;
+        overflow: hidden;
+        &:hover .conditions__icon-bg{
+            transform: scale(3);
+        }
+        .conditions__wrap-icon{
+            position: relative;
+            width: 40px;
+            height: 40px;
+            .conditions__icon{
+                width: 100%;
+                height: 100%;
+                background-color: $secondary-bg;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                position: relative;
+                z-index: 2;
+                &::before{
+                    content: '\f073';
+                    font-size: 20px;
+                    color: white;
+                    font-weight: 900;
+                    font-family: $awesome-font;
+                }
+                &.conditions__icon-2::before{
+                    content: '\f017';
+                }
+                &.conditions__icon-3::before{
+                    content: '\f653';
+                }
+                &.conditions__icon-4::before{
+                    content: '\f007';
+                }
+            }
+            .conditions__icon-bg{
+                position: absolute;
+                top:0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: $secondary-bg;
+                z-index: 1;
+                transition: transform .3s ease;
+            }
+        }
+        .conditions__text{
+            margin-top: 10px;
+            color:$base-color-light;
+            position: relative;
+            z-index: 2;
+        }
+    }
+}

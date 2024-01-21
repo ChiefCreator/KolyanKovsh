@@ -1,0 +1,383 @@
+@import '../../fonts/Gilroy/stylesheet.css';
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+body {
+  font-family: "Gilroy";
+}
+
+.container {
+  max-width: 1400px;
+  height: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/header-img-darken.png");
+}
+
+.nav {
+  padding: 30px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 8fr 2fr;
+  grid-template-columns: 2fr 8fr 2fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+
+.nav > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.nav > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.nav > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+.nav .nav__brand {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.nav .nav__brand .nav__brand-half-1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+}
+.nav .nav__brand .nav__brand-half-2 {
+  margin-top: auto;
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(255, 191, 0);
+  -webkit-transition: font-size 0.3s ease;
+  transition: font-size 0.3s ease;
+}
+.nav .nav__brand:hover .nav__brand-half-2 {
+  -webkit-animation: brand-anim 1.3s ease infinite;
+          animation: brand-anim 1.3s ease infinite;
+}
+@-webkit-keyframes brand-anim {
+  0%, 100% {
+    font-size: 25px;
+  }
+  50% {
+    font-size: 30px;
+  }
+}
+@keyframes brand-anim {
+  0%, 100% {
+    font-size: 25px;
+  }
+  50% {
+    font-size: 30px;
+  }
+}
+.nav .nav__navigation .nav__list {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 40px;
+}
+.nav .nav__navigation .nav__list .nav__link {
+  font-weight: 500;
+  font-size: 17px;
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+.nav .nav__navigation .nav__list .nav__link::before {
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: rgb(212, 159, 0);
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+.nav .nav__navigation .nav__list .nav__link:hover::before {
+  left: 0;
+  width: 100%;
+}
+.nav .nav__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.nav .nav__contacts .nav__contact {
+  min-width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid rgb(187, 187, 187);
+  border-radius: 10px;
+  padding-right: 7px;
+  gap: 0px;
+  cursor: pointer;
+}
+.nav .nav__contacts .nav__contact.nav__contact-1 {
+  background-color: rgb(212, 159, 0);
+  border: 1px solid rgb(212, 159, 0);
+}
+.nav .nav__contacts .nav__contact .nav__icon-contact {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.nav .nav__contacts .nav__contact .nav__icon-contact::before {
+  content: "\f0e0";
+  font-size: 20px;
+  color: white;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+}
+.nav .nav__contacts .nav__contact .nav__icon-contact.nav__icon-contact-1::before {
+  content: "\f095";
+}
+.nav .nav__contacts .nav__contact .nav__text-contact {
+  color: white;
+}
+
+.title {
+  color: rgb(255, 191, 0);
+  font-size: 40px;
+  max-width: 500px;
+  text-wrap: balance;
+}
+.title.title_mt {
+  margin-top: 50px;
+}
+
+.benefits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.benefits.benefits_mt {
+  margin-top: 20px;
+}
+.benefits .benefits__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.benefits .benefits__item .benefits__icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(17, 197, 17);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.benefits .benefits__item .benefits__icon::before {
+  content: "\f5a2";
+  font-size: 20px;
+  color: white;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+}
+.benefits .benefits__item .benefits__icon.benefits__icon-2::before {
+  content: "\f7d9";
+}
+.benefits .benefits__item .benefits__icon.benefits__icon-3::before {
+  content: "\f2b5";
+}
+.benefits .benefits__item .benefits__title {
+  color: white;
+  font-weight: 500;
+}
+
+.btn-request {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 10px;
+  border-bottom: 3px solid rgb(212, 159, 0);
+  color: white;
+  cursor: pointer;
+}
+.btn-request .btn-request__arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.btn-request .btn-request__title {
+  font-size: 22px;
+  font-weight: 600;
+}
+.btn-request .btn-request__arrow::before {
+  content: "\f105";
+  font-size: 20px;
+  color: white;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-request.btn-request_mt {
+  margin-top: 20px;
+}
+.btn-request:hover .btn-request__arrow::before {
+  content: "\f178";
+  margin-left: 10px;
+}
+
+.conditions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.conditions.conditions_mt {
+  margin-top: 60px;
+}
+.conditions .conditions__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  padding: 15px;
+  background-color: rgba(139, 139, 139, 0.3);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.conditions .conditions__item:hover .conditions__icon-bg {
+  -webkit-transform: scale(3);
+          transform: scale(3);
+}
+.conditions .conditions__item .conditions__wrap-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+.conditions .conditions__item .conditions__wrap-icon .conditions__icon {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(17, 197, 17);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+}
+.conditions .conditions__item .conditions__wrap-icon .conditions__icon::before {
+  content: "\f073";
+  font-size: 20px;
+  color: white;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+}
+.conditions .conditions__item .conditions__wrap-icon .conditions__icon.conditions__icon-2::before {
+  content: "\f017";
+}
+.conditions .conditions__item .conditions__wrap-icon .conditions__icon.conditions__icon-3::before {
+  content: "\f653";
+}
+.conditions .conditions__item .conditions__wrap-icon .conditions__icon.conditions__icon-4::before {
+  content: "\f007";
+}
+.conditions .conditions__item .conditions__wrap-icon .conditions__icon-bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(17, 197, 17);
+  z-index: 1;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.conditions .conditions__item .conditions__text {
+  margin-top: 10px;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
