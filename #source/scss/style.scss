@@ -28,7 +28,7 @@ body{
     min-height: 100vh;
     background-position: center;
     background-size: cover;
-    background-image: url("../../img/excavator.jpg");
+    background-image: url("../../img/excavator-dark.jpg");
     padding-bottom: 10px;
 }
 
@@ -153,14 +153,14 @@ body{
                     border-radius: 10px;
                     width: 100%;
                     height: 100%;
-                    background-image: url("../../img/excavator-african.jpg");
+                    background-image: url("../../img/excavator-african-dark.jpg");
                     background-position: center;
                     background-size: cover;
                     &.slide-content-2{
-                        background-image: url("../../img/worker.jpg");
+                        background-image: url("../../img/worker-dark.jpg");
                     }
                     &.slide-content-3{
-                        background-image: url("../../img/excavator.jpg");
+                        background-image: url("../../img/excavator-dark.jpg");
                     }
                 }
             }
@@ -348,10 +348,6 @@ body{
     &.section-title_mt{
         margin: 80px 0;
     }
-}
-
-.technique{
-    
 }
 
 .car-list{
