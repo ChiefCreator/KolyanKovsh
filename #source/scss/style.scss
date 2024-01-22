@@ -141,7 +141,7 @@ body{
 
 .header-content{
     display: grid;
-    grid-template-columns: 8fr 4fr;
+    grid-template-columns: 8.5fr 3.5fr;
     .swiper{
         margin-top: auto;
         width: 100%;
@@ -179,6 +179,14 @@ body{
             display: flex;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
+            transition: transform .3s ease;
+            &:hover{
+                background-color: rgba(170, 170, 170, 0.3);
+            }
+            &:active{
+                transform: scale(.9);
+            }
             &.btn-swiper-next::before{
                 content: '\f105';
                 font-size: 25px;

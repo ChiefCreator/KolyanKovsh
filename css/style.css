@@ -197,8 +197,8 @@ body {
 .header-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 8fr 4fr;
-  grid-template-columns: 8fr 4fr;
+  -ms-grid-columns: 8.5fr 3.5fr;
+  grid-template-columns: 8.5fr 3.5fr;
 }
 .header-content .swiper {
   margin-top: auto;
@@ -247,6 +247,18 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.header-content .swiper .btn-swiper:hover {
+  background-color: rgba(170, 170, 170, 0.3);
+}
+.header-content .swiper .btn-swiper:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 .header-content .swiper .btn-swiper.btn-swiper-next::before {
   content: "\f105";
