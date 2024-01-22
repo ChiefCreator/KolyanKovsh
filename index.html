@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>KolyanKovsh</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -42,56 +43,78 @@
                     </div>
                 </div>
             </nav>
-            <h1 class="title title_mt">Аренда спецтехники в Могилеве и области</h1>
-            <ul class="benefits benefits_mt">
-                <li class="benefits__item">
-                    <div class="benefits__icon"></div>
-                    <p class="benefits__title">10+ лет на рынке</p>
-                </li>
-                <li class="benefits__item">
-                    <div class="benefits__icon benefits__icon-2"></div>
-                    <p class="benefits__title">Вся оборудование не старше 5 лет</p>
-                </li>
-                <li class="benefits__item">
-                    <div class="benefits__icon benefits__icon-3"></div>
-                    <p class="benefits__title">Работаем по договору</p>
-                </li>
-            </ul>
-            <div class="btn-request btn-request_mt" role="button">
-                <p class="btn-request__title">Связаться с нами</p>
-                <div class="btn-request__arrow"></div>
+            <div class="header-content header-content__mt">
+                <div class="header-content__base">
+                    <h1 class="title">Аренда спецтехники в Могилеве и области</h1>
+                    <ul class="benefits benefits_mt">
+                        <li class="benefits__item">
+                            <div class="benefits__icon"></div>
+                            <p class="benefits__title">10+ лет на рынке</p>
+                        </li>
+                        <li class="benefits__item">
+                            <div class="benefits__icon benefits__icon-2"></div>
+                            <p class="benefits__title">Вся оборудование не старше 5 лет</p>
+                        </li>
+                        <li class="benefits__item">
+                            <div class="benefits__icon benefits__icon-3"></div>
+                            <p class="benefits__title">Работаем по договору</p>
+                        </li>
+                    </ul>
+                    <div class="btn-request btn-request_mt" role="button">
+                        <p class="btn-request__title">Связаться с нами</p>
+                        <div class="btn-request__arrow"></div>
+                    </div>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slide-content slide-content-1"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-content slide-content-2"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-content slide-content-3"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-btn-wrapper">
+                        <div class="btn-swiper btn-swiper-prev"></div>
+                        <div class="btn-swiper btn-swiper-next"></div>
+                    </div>
+                </div>
             </div>
             <ul class="conditions conditions_mt">
-                <li class="conditions__item">
-                    <div class="conditions__wrap-icon">
-                        <div class="conditions__icon"></div>
-                        <div class="conditions__icon-bg"></div>
-                    </div>
-                    <p class="conditions__text">Гибкое расписание, аренда день в день или к назначенному времени</p>
-                </li>
-                <li class="conditions__item">
-                    <div class="conditions__wrap-icon">
-                        <div class="conditions__icon conditions__icon-2"></div>
-                        <div class="conditions__icon-bg"></div>
-                    </div>
-                    <p class="conditions__text">Аренда техники от 1 часа</p>
-                </li>
-                <li class="conditions__item">
-                    <div class="conditions__wrap-icon">
-                        <div class="conditions__icon conditions__icon-3"></div>
-                        <div class="conditions__icon-bg"></div>
-                    </div>
-                    <p class="conditions__text">Наличный и безналичный расчет</p>
-                </li>
-                <li class="conditions__item">
-                    <div class="conditions__wrap-icon">
-                        <div class="conditions__icon conditions__icon-4"></div>
-                        <div class="conditions__icon-bg"></div>
-                    </div>
-                    <p class="conditions__text">Работаем с физлицами и юрлицами</p>
-                </li>
+                    <li class="conditions__item">
+                        <div class="conditions__wrap-icon">
+                            <div class="conditions__icon"></div>
+                            <div class="conditions__icon-bg"></div>
+                        </div>
+                        <p class="conditions__text">Гибкое расписание, аренда день в день или к назначенному времени</p>
+                    </li>
+                    <li class="conditions__item">
+                        <div class="conditions__wrap-icon">
+                            <div class="conditions__icon conditions__icon-2"></div>
+                            <div class="conditions__icon-bg"></div>
+                        </div>
+                        <p class="conditions__text">Аренда техники от 1 часа</p>
+                    </li>
+                    <li class="conditions__item">
+                        <div class="conditions__wrap-icon">
+                            <div class="conditions__icon conditions__icon-3"></div>
+                            <div class="conditions__icon-bg"></div>
+                        </div>
+                        <p class="conditions__text">Наличный и безналичный расчет</p>
+                    </li>
+                    <li class="conditions__item">
+                        <div class="conditions__wrap-icon">
+                            <div class="conditions__icon conditions__icon-4"></div>
+                            <div class="conditions__icon-bg"></div>
+                        </div>
+                        <p class="conditions__text">Работаем с физлицами и юрлицами</p>
+                    </li>
             </ul>
         </div>
     </header>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script/headerSlider.js"></script>
 </body>

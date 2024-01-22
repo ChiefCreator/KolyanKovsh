@@ -20,7 +20,6 @@ body{
 
 .container{
     max-width: 1400px;
-    height: 100%;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -29,7 +28,8 @@ body{
     min-height: 100vh;
     background-position: center;
     background-size: cover;
-    background-image: url("../../img/header-img-darken.png");
+    background-image: url("../../img/excavator.jpg");
+    padding-bottom: 10px;
 }
 
 .nav{
@@ -139,14 +139,72 @@ body{
     }
 }
 
+.header-content{
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    .swiper{
+        margin-top: auto;
+        width: 100%;
+        .swiper-wrapper{
+            height: 250px;
+            .swiper-slide{
+                width: 100%;
+                .slide-content{
+                    border-radius: 10px;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url("../../img/excavator-african.jpg");
+                    background-position: center;
+                    background-size: cover;
+                    &.slide-content-2{
+                        background-image: url("../../img/worker.jpg");
+                    }
+                    &.slide-content-3{
+                        background-image: url("../../img/excavator.jpg");
+                    }
+                }
+            }
+        }
+        .swiper-btn-wrapper{
+            margin-top: 20px;
+            display: inline-flex;
+            gap:20px;
+        }
+        .btn-swiper{
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: rgba(139, 139, 139, 0.3);
+            backdrop-filter: blur(2px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &.btn-swiper-next::before{
+                content: '\f105';
+                font-size: 25px;
+                color: white;
+                font-weight: 900;
+                font-family: $awesome-font;
+            }
+            &.btn-swiper-prev::before{
+                content: '\f104';
+                font-size: 25px;
+                color: white;
+                font-weight: 900;
+                font-family: $awesome-font;
+            }
+        }
+    }
+    &.header-content__mt{
+        margin-top: 50px;
+    }
+}
+
 .title{
     color:$main-color;
     font-size: 40px;
     max-width: 500px;
     text-wrap: balance;
-    &.title_mt{
-        margin-top: 50px;
-    }
 }
 
 .benefits{
@@ -221,11 +279,12 @@ body{
     }
 }
 
-.conditions{
+.conditions{  
     display: flex;
     gap: 20px;
+    margin-top: auto;
     &.conditions_mt{
-        margin-top: 60px;
+        margin-top: 140px;
     }
     .conditions__item{
         flex: 1 1 25%;
