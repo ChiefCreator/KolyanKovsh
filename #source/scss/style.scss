@@ -256,34 +256,17 @@ body{
 }
 
 .btn-request{
-    display: inline-flex;
-    gap: 10px;
-    border-bottom: 3px solid $main-bg;
-    color:$base-color-light;
+    padding: 13px 20px;
+    background-color: $main-bg;
+    border-radius: 10px;
+    font-size: 17px;
+    color: $base-color-light;
     cursor: pointer;
-    .btn-request__arrow{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .btn-request__title{
-        font-size: 22px;
-        font-weight: 600;
-    }
-    .btn-request__arrow::before{
-        content: '\f105';
-        font-size: 20px;
-        color: white;
-        font-weight: 900;
-        font-family: $awesome-font;
-        transition: all .3s ease;
-    }
     &.btn-request_mt{
         margin-top: 20px;
     }
-    &:hover .btn-request__arrow::before{
-        content: '\f178';
-        margin-left: 10px;
+    &.car-list__btn{
+        margin-top: auto;
     }
 }
 
@@ -351,6 +334,101 @@ body{
             color:$base-color-light;
             position: relative;
             z-index: 2;
+        }
+    }
+}
+
+// Секция с нашей техникой
+
+.section-title{
+    text-align: center;
+    color: $base-color-dark;
+    font-size: 36px;
+    text-transform: uppercase;
+    &.section-title_mt{
+        margin: 80px 0;
+    }
+}
+
+.technique{
+    
+}
+
+.car-list{
+    margin-bottom: 200px;
+    display: grid;
+    grid-template-columns: repeat(3,4fr);
+    gap: 30px;
+    .car-list__item{
+        background-color: rgba(139, 139, 139, 0.3);
+        backdrop-filter: blur(2px);
+        border-radius: 20px;
+        .car-list__card{
+            height: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            &:hover .car-list__info{
+                animation: anim-info .4s ease 2;
+            }
+            @keyframes anim-info {
+                0%,100%{
+                    transform: translateY(0);
+                }
+                50%{
+                    transform: translateY(-10px);
+                }
+            }
+            .car-list__img{
+                height: 300px;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                overflow: hidden;
+                position: relative;
+                .car-list__info{
+                    display: block;
+                    position: absolute;
+                    top:15px;
+                    right: 15px;
+                    width: 35px;
+                    height: 35px;
+                    background-color: $main-bg;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    &::before{
+                        content: '\f129';
+                        font-size: 20px;
+                        color: white;
+                        font-weight: 900;
+                        font-family: $awesome-font;
+                    }
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+            .car-list__type{
+                margin-top: 10px;
+                font-size: 15px;
+                font-weight: 300;
+            }
+            .car-list__title{
+                margin-top: 5px;
+                font-size: 22px;
+                font-weight: 500;
+            }
+            .car-list__text{
+                font-size: 17px;
+                font-weight: 400;
+                margin-top: 5px;
+                margin-bottom: 30px;
+            }
         }
     }
 }

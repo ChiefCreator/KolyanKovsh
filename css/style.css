@@ -341,44 +341,18 @@ body {
 }
 
 .btn-request {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  gap: 10px;
-  border-bottom: 3px solid rgb(212, 159, 0);
+  padding: 13px 20px;
+  background-color: rgb(212, 159, 0);
+  border-radius: 10px;
+  font-size: 17px;
   color: white;
   cursor: pointer;
-}
-.btn-request .btn-request__arrow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.btn-request .btn-request__title {
-  font-size: 22px;
-  font-weight: 600;
-}
-.btn-request .btn-request__arrow::before {
-  content: "\f105";
-  font-size: 20px;
-  color: white;
-  font-weight: 900;
-  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 .btn-request.btn-request_mt {
   margin-top: 20px;
 }
-.btn-request:hover .btn-request__arrow::before {
-  content: "\f178";
-  margin-left: 10px;
+.btn-request.car-list__btn {
+  margin-top: auto;
 }
 
 .conditions {
@@ -462,4 +436,122 @@ body {
   color: white;
   position: relative;
   z-index: 2;
+}
+
+.section-title {
+  text-align: center;
+  color: black;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.section-title.section-title_mt {
+  margin: 80px 0;
+}
+
+.car-list {
+  margin-bottom: 200px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 30px 4fr 30px 4fr;
+  grid-template-columns: repeat(3, 4fr);
+  gap: 30px;
+}
+.car-list .car-list__item {
+  background-color: rgba(139, 139, 139, 0.3);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border-radius: 20px;
+}
+.car-list .car-list__item .car-list__card {
+  height: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.car-list .car-list__item .car-list__card:hover .car-list__info {
+  -webkit-animation: anim-info 0.4s ease 2;
+          animation: anim-info 0.4s ease 2;
+}
+@-webkit-keyframes anim-info {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+@keyframes anim-info {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+.car-list .car-list__item .car-list__card .car-list__img {
+  height: 300px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.car-list .car-list__item .car-list__card .car-list__img .car-list__info {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  background-color: rgb(212, 159, 0);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+.car-list .car-list__item .car-list__card .car-list__img .car-list__info::before {
+  content: "\f129";
+  font-size: 20px;
+  color: white;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+}
+.car-list .car-list__item .car-list__card .car-list__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.car-list .car-list__item .car-list__card .car-list__type {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 300;
+}
+.car-list .car-list__item .car-list__card .car-list__title {
+  margin-top: 5px;
+  font-size: 22px;
+  font-weight: 500;
+}
+.car-list .car-list__item .car-list__card .car-list__text {
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 30px;
 }
