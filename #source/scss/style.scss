@@ -40,37 +40,7 @@ body{
     display: grid;
     grid-template-columns: 2fr 8fr 2fr;
     grid-template-rows: auto;
-    .nav__brand{
-        display: block;
-        display: flex;
-        align-items: center;
-        .nav__brand-half-1{
-            font-size: 30px;
-            font-weight: 600;
-            color: white;
-        }
-        .nav__brand-half-2{
-            margin-top: auto;
-            font-size: 25px;
-            font-weight: 600;
-            color: $main-color;
-            transition: font-size .3s ease;
-        }
-        &:hover .nav__brand-half-2{
-            // font-size: 30px;
-            animation: brand-anim 1.3s ease infinite;
-        }
-        @keyframes brand-anim {
-            0%,100%{
-                font-size: 25px;
-            }
-            50%{
-                font-size: 30px;
-            }
-        }
-    }
     .nav__navigation{
-        
         .nav__list{
             height: 100%;
             display: flex;
@@ -138,6 +108,34 @@ body{
             .nav__text-contact{
                 color: white;
             }
+        }
+    }
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    .brand-left{
+        font-size: 30px;
+        font-weight: 600;
+        color: white;
+    }
+    .brand-right{
+        margin-top: auto;
+        font-size: 25px;
+        font-weight: 600;
+        color: $main-color;
+        transition: font-size .3s ease;
+    }
+    &:hover .brand-right{
+        animation: brand-anim 1.3s ease infinite;
+    }
+    @keyframes brand-anim {
+        0%,100%{
+            font-size: 25px;
+        }
+        50%{
+            font-size: 30px;
         }
     }
 }
@@ -835,6 +833,68 @@ body{
                     padding: 0 15px 15px 15px;
                     p{
                         margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Футер сайта
+
+.footer{
+    background-color: rgb(55, 19, 19);
+    padding: 80px 20px 80px 20px;
+    .footer-grid{
+        display: grid;
+        grid-template-columns: 4fr 2fr 2.5fr 2.5fr 1fr;
+        .footer-grid__brand{
+            h4{
+                margin-top: 5px;
+                color: white;
+                font-size: 20px;
+            }
+        }
+        .footer-grid__contacts{
+            grid-column-start: 3;
+            color: $base-color-light;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .footer-grid-contact-title{
+                font-size: 17px;
+                font-weight: 500;
+            }
+            .footer-grid__number{
+                color: $main-color;
+            }
+            .footer-grid__email{
+                color: $main-color;
+            }
+        }
+        .footer-grid__navigation{
+            .footer-grid__list{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .footer-grid__item{
+                    .footer-grid__link{
+                        color:white;
+                        position: relative;
+                        &::before{
+                            position: absolute;
+                            content: '';
+                            bottom: -2px;
+                            height: 2px;
+                            width: 0;
+                            background-color: $main-bg;
+                            right: 0;
+                            transition: width .3s ease;
+                        }
+                        &:hover::before{
+                            left: 0;
+                            width: 100%;
+                        }
                     }
                 }
             }
