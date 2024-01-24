@@ -741,11 +741,16 @@ body{
 
 // Секция с обратной связью
 
-.wrap-feedback{
+.feedback-grid{
+    display: grid;
+    grid-template-columns: 7.5fr 4.5fr;
+    gap: 20px;
     margin: 100px 0;
+}
+.wrap-feedback{
     width: 100%;
     display: flex;
-    border-radius: 10px;
+    border-radius: 10px; 
     .wrap-feedback__content{
         flex: 1 1 50%;
         display: flex;
@@ -778,6 +783,61 @@ body{
             height: 100%;
             object-fit: cover;
             object-position: center;
+        }
+    }
+}
+.accordion{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .accordion__item{
+        width: 100%;
+        background-color: gainsboro;
+        border-radius: 10px;
+        height: auto;
+        .accordion__head{
+            padding: 20px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            &.accordion__head_act{
+                .accordion__icon::before{
+                    content: '\f078';
+                }
+            }
+            .accordion__title{
+                font-size: 19px;
+                font-weight: 400;
+            }
+            .accordion__icon::before{
+                    content: '\f054';
+                    font-size: 25px;
+                    color:$base-color-dark;
+                    font-weight: 900;
+                    font-family: $awesome-font;
+            }
+        }
+        .accordion__body{
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows .3s ease;
+            overflow: hidden;
+            &.accordion__body_act{
+                grid-template-rows: 1fr;
+                .accordion__auto-height{
+                    height: auto;
+                }
+            }
+            .accordion__auto-height{
+                min-height: 0;
+                .accordion__wrapper{
+                    padding: 0 15px 15px 15px;
+                    p{
+                        margin-top: 5px;
+                    }
+                }
+            }
         }
     }
 }
