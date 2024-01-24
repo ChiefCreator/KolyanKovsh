@@ -563,7 +563,6 @@ body {
   -webkit-column-gap: 100px;
      -moz-column-gap: 100px;
           column-gap: 100px;
-  margin-bottom: 1000px;
 }
 .service-grid .service-grid__path {
   display: -webkit-box;
@@ -683,4 +682,321 @@ body {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 18px;
+}
+
+.plan-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 20px auto 20px 3fr 20px auto 20px 3fr;
+  grid-template-columns: 3fr auto 3fr auto 3fr;
+  -ms-grid-rows: auto 20px auto 20px auto;
+  grid-template-rows: auto auto auto;
+  margin-bottom: 1000px;
+  gap: 20px;
+}
+
+.plan-grid > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.plan-grid > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.plan-grid > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+
+.plan-grid > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 7;
+}
+
+.plan-grid > *:nth-child(5) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 9;
+}
+
+.plan-grid > *:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.plan-grid > *:nth-child(7) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+
+.plan-grid > *:nth-child(8) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+
+.plan-grid > *:nth-child(9) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 7;
+}
+
+.plan-grid > *:nth-child(10) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 9;
+}
+
+.plan-grid > *:nth-child(11) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+}
+
+.plan-grid > *:nth-child(12) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+}
+
+.plan-grid > *:nth-child(13) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
+}
+
+.plan-grid > *:nth-child(14) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 7;
+}
+
+.plan-grid > *:nth-child(15) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 9;
+}
+.plan-grid .plan-grid__step {
+  border-radius: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgb(221, 221, 221);
+  position: relative;
+}
+.plan-grid .plan-grid__step.plan-grid__step-3-md {
+  display: none;
+}
+.plan-grid .plan-grid__step.plan-grid__step-4-md {
+  display: none;
+}
+.plan-grid .plan-grid__step.plan-grid__step-6-md {
+  display: none;
+}
+.plan-grid .plan-grid__step:hover .plan-grid__step-bg {
+  width: 100%;
+}
+.plan-grid .plan-grid__step .plan-grid__step-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgb(17, 197, 17);
+  z-index: 1;
+  -webkit-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+}
+.plan-grid .plan-grid__step .plan-grid__icon-block {
+  background-color: rgb(17, 197, 17);
+  border-radius: 10px;
+  min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.plan-grid .plan-grid__step .plan-grid__icon-block .plan-grid__icon {
+  position: relative;
+  z-index: 2;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  margin: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.plan-grid .plan-grid__step .plan-grid__icon-block .plan-grid__icon::before {
+  content: "\f007";
+  font-size: 23px;
+  color: rgb(197, 197, 197);
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+}
+.plan-grid .plan-grid__step .plan-grid__icon-block .plan-grid__icon.plan-grid__icon-2::before {
+  content: "\f688";
+}
+.plan-grid .plan-grid__step .plan-grid__icon-block .plan-grid__icon.plan-grid__icon-3::before {
+  content: "\f56c";
+}
+.plan-grid .plan-grid__step .plan-grid__icon-block .plan-grid__icon.plan-grid__icon-4::before {
+  content: "\f4df";
+}
+.plan-grid .plan-grid__step .plan-grid__icon-block .plan-grid__icon.plan-grid__icon-5::before {
+  content: "\f85e";
+}
+.plan-grid .plan-grid__step .plan-grid__icon-block .plan-grid__icon.plan-grid__icon-6::before {
+  content: "\f00c";
+}
+.plan-grid .plan-grid__step .plan-grid__icon-block .plan-grid__num {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 0;
+  color: white;
+}
+.plan-grid .plan-grid__step .plan-grid__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  padding: 20px;
+}
+.plan-grid .plan-grid__step .plan-grid__content .plan-grid__title {
+  position: relative;
+  z-index: 2;
+  font-size: 22px;
+  font-weight: 500;
+}
+.plan-grid .plan-grid__step .plan-grid__content .plan-grid__text {
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+}
+.plan-grid .plan-grid__path {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.plan-grid .plan-grid__path .plan-grid__line {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.plan-grid .plan-grid__path .plan-grid__line.plan-grid__line_act {
+  opacity: 1;
+}
+.plan-grid .plan-grid__path .plan-grid__line.plan-grid__line_transform-bottom-lg {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.plan-grid .plan-grid__path .plan-grid__line.plan-grid__line_transform-left-lg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.plan-grid .plan-grid__path .plan-grid__line::before {
+  content: "\f101";
+  font-size: 45px;
+  color: rgb(17, 197, 17);
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+}
+.plan-grid .hollow-div-lg {
+  display: block;
+}
+.plan-grid .hollow-div-md {
+  display: none;
+}
+
+@media screen and (max-width: 1250px) {
+  .plan-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 5fr auto 5fr;
+    grid-template-columns: 5fr auto 5fr;
+  }
+  .plan-grid .hollow-div-lg {
+    display: none;
+  }
+  .plan-grid .hollow-div-md {
+    display: block;
+  }
+  .plan-grid .plan-grid__step.plan-grid__step-3-md {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .plan-grid .plan-grid__step.plan-grid__step-6 {
+    display: none;
+  }
+  .plan-grid .plan-grid__step.plan-grid__step-3 {
+    display: none;
+  }
+  .plan-grid .plan-grid__step.plan-grid__step-4-md {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .plan-grid .plan-grid__step.plan-grid__step-4 {
+    display: none;
+  }
+  .plan-grid .plan-grid__step.plan-grid__step-6-md {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .plan-grid .plan-grid__path-2 .plan-grid__line {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .plan-grid .plan-grid__path-3 .plan-grid__line {
+    -webkit-transform: rotate(180deg) !important;
+            transform: rotate(180deg) !important;
+  }
+  .plan-grid .plan-grid__path-4 .plan-grid__line {
+    -webkit-transform: rotate(90deg) !important;
+            transform: rotate(90deg) !important;
+  }
+  .plan-grid .plan-grid__path-5 .plan-grid__line {
+    -webkit-transform: rotate(360deg) !important;
+            transform: rotate(360deg) !important;
+  }
+}
+@media screen and (max-width: 780px) {
+  .plan-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 12fr;
+    grid-template-columns: 12fr;
+  }
+  .plan-grid .hollow-div-md {
+    display: none;
+  }
+  .plan-grid .plan-grid__line {
+    -webkit-transform: rotate(90deg) !important;
+            transform: rotate(90deg) !important;
+  }
+  .plan-grid .plan-grid__path-3 .plan-grid__line {
+    -webkit-transform: rotate(90deg) !important;
+            transform: rotate(90deg) !important;
+  }
+  .plan-grid .plan-grid__path-5 .plan-grid__line {
+    -webkit-transform: rotate(90deg) !important;
+            transform: rotate(90deg) !important;
+  }
 }

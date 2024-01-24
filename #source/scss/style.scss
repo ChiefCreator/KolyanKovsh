@@ -434,7 +434,6 @@ body{
     display: grid;
     grid-template-columns: 80px 1fr;
     column-gap: 100px;
-    margin-bottom: 1000px;
     .service-grid__path{
         display: flex;
         flex-direction: column;
@@ -524,6 +523,216 @@ body{
             margin-bottom: 10px;
             font-weight: 500;
             font-size: 18px;
+        }
+    }
+}
+
+// Секция со схемой работ
+
+.plan-grid{
+    display: grid;
+    grid-template-columns:  3fr auto 3fr auto 3fr;
+    grid-template-rows: auto auto auto;
+    margin-bottom: 1000px;
+    gap: 20px;
+    .plan-grid__step{
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        background-color: rgb(221, 221, 221);
+        position: relative;
+        &.plan-grid__step-3-md{
+            display: none;
+        }
+        &.plan-grid__step-4-md{
+            display: none;
+        }
+        &.plan-grid__step-6-md{
+            display: none;
+        }
+        &:hover .plan-grid__step-bg{
+            width: 100%;
+        }
+        .plan-grid__step-bg{
+            position: absolute;
+            left: 0;
+            top:0;
+            width: 0%;
+            height: 100%;
+            background-color: $secondary-bg;
+            z-index: 1;
+            transition: width .5s ease;
+        }
+        .plan-grid__icon-block{
+            background-color: $secondary-bg;
+            border-radius: 10px;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .plan-grid__icon{
+                position: relative;
+                z-index: 2;
+                width: 45px;
+                height: 45px;
+                border-radius: 10px;
+                background-color: rgb(255, 255, 255);
+                margin: 10px 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &::before{
+                    content: '\f007';
+                    font-size: 23px;
+                    color: rgb(197, 197, 197);
+                    font-weight: 900;
+                    font-family: $awesome-font;
+                }
+                &.plan-grid__icon-2::before{
+                    content: '\f688';
+                }
+                &.plan-grid__icon-3::before{
+                    content: '\f56c';
+                }
+                &.plan-grid__icon-4::before{
+                    content: '\f4df';
+                }
+                &.plan-grid__icon-5::before{
+                    content: '\f85e';
+                }
+                &.plan-grid__icon-6::before{
+                    content: '\f00c';
+                }
+            }
+            .plan-grid__num{
+                position: relative;
+                z-index: 2;
+                text-align: center;
+                font-size: 20px;
+                font-weight: 500;
+                margin: 10px 0;
+                color: $base-color-light;
+            }
+        }
+        .plan-grid__content{
+            flex: 1 1 100%;
+            padding: 20px;
+            .plan-grid__title{
+                position: relative;
+                z-index: 2;
+                font-size: 22px;
+                font-weight: 500;
+            }
+            .plan-grid__text{
+                position: relative;
+                z-index: 2;
+                margin-top: 10px;
+            }
+        }
+    }
+    .plan-grid__path{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .plan-grid__line{
+            opacity: 0;
+            transition: all .5s ease;
+            &.plan-grid__line_act{
+                opacity: 1;
+            }
+            &.plan-grid__line_transform-bottom-lg{
+                transform: rotate(90deg);
+            }
+            &.plan-grid__line_transform-left-lg{
+                transform: rotate(180deg);
+            }
+            &::before{
+                content: '\f101';
+                font-size: 45px;
+                color: $secondary-bg;
+                font-weight: 900;
+                font-family: $awesome-font;
+            }
+        }
+    }
+    .hollow-div-lg{
+        display: block;
+    }
+    .hollow-div-md{
+        display: none;
+    }
+}
+@media screen and (max-width:1250px){
+    .plan-grid{
+        display: grid;
+        grid-template-columns:  5fr auto 5fr;
+        .hollow-div-lg{
+            display: none;
+        }
+        .hollow-div-md{
+            display: block;
+        }
+        .plan-grid__step{
+            &.plan-grid__step-3-md{
+                display: flex;
+            }
+            &.plan-grid__step-6{
+                display: none;
+            }
+            &.plan-grid__step-3{
+                display: none;
+            }
+            &.plan-grid__step-4-md{
+                display: flex;
+            }
+            &.plan-grid__step-4{
+                display: none;
+            }
+            &.plan-grid__step-6-md{
+                display: flex;
+            }
+        }
+        .plan-grid__path-2{
+            .plan-grid__line{
+                transform: rotate(90deg);
+            }
+        }
+        .plan-grid__path-3{
+            .plan-grid__line{
+                transform: rotate(180deg) !important;
+            }
+        }
+        .plan-grid__path-4{
+            .plan-grid__line{
+                transform: rotate(90deg) !important;
+            }
+        }
+        .plan-grid__path-5{
+            .plan-grid__line{
+                transform: rotate(360deg) !important;
+            }
+        }
+    }
+}
+@media screen and (max-width:780px){
+    .plan-grid{
+        display: grid;
+        grid-template-columns:  12fr;
+        .hollow-div-md{
+            display: none;
+        }
+        .plan-grid__line{
+            transform: rotate(90deg) !important;
+        }
+        .plan-grid__path-3{
+            .plan-grid__line{
+                transform: rotate(90deg) !important;
+            }
+        }
+        .plan-grid__path-5{
+            .plan-grid__line{
+                transform: rotate(90deg) !important;
+            }
         }
     }
 }

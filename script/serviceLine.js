@@ -10,7 +10,6 @@ sectionItems.forEach(sectionItem => {
     let sectionItemPos = sectionItem.offsetTop - topPos
     arrPoses.push(sectionItemPos)
 })
-console.log(arrPoses)
 
 // Массив с линиями
 let arrLines = []
@@ -29,12 +28,10 @@ window.addEventListener("scroll", function() {
     // Отнимаем 350 пикселей чтобы росла шла заранее
     let topPosOnScroll = section.getBoundingClientRect().top - 350
     let topPosOnScrollTemp = -topPosOnScroll;
-    console.log(topPosOnScrollTemp)
 
     if(topPosOnScroll <= 0) {
             
         for (let i = 0;i < lines.length;i++) {
-            console.log(topPosOnScrollTemp)
 
             // добавление высоты со скроллом
             if (topPosOnScrollTemp >= arrPoses[i]) {
