@@ -8,6 +8,124 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <form class="popup" id="btn-request-main">
+        <header class="popup__head">
+            <h3 class="popup__title-head">Обратная связь</h3>
+            <div class="popup__btn-close"></div>
+        </header>
+        <div class="popup__body popup__body-prev open">
+            <div class="popup__radio-choice">
+                <h4 class="popup__subtitle">Выберите вид техники:</h4>
+                <section class="popup__radio-content">
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-1" id="radio-1-1">
+                        </div>
+                        <label for="radio-1-1" class="popup__label">Полноповоротный колёсный экскаватор DOOSAN DX210W</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-1" id="radio-1-2">
+                        </div>
+                        <label for="radio-1-2" class="popup__label">Экскаватор-погрузчик 4CX и JCB 5CX</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-1" id="radio-1-3">
+                        </div>
+                        <label for="radio-1-3" class="popup__label">Мини-экскаватор JCB 8030 ZTS</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-1" id="radio-1-4">
+                        </div>
+                        <label for="radio-1-4" class="popup__label">Самосвал МАЗ</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-1" id="radio-1-5">
+                        </div>
+                        <label for="radio-1-5" class="popup__label">Виброкаток Changlin</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-1" id="radio-1-6">
+                        </div>
+                        <label for="radio-1-6" class="popup__label">Трал для перевозки спецтехники</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-1" id="radio-1-7">
+                        </div>
+                        <label for="radio-1-7" class="popup__label">Необходима консультация в выборе</label>
+                    </div>
+                </section>
+                <h4 class="popup__subtitle">Выберите вид услуги:</h4>
+                <section class="popup__radio-content">
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-2" id="radio-2-1">
+                        </div>
+                        <label for="radio-2-1" class="popup__label">Вывоз строительного мусора</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-2" id="radio-2-2">
+                        </div>
+                        <label for="radio-2-2" class="popup__label">Доставка песка</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-2" id="radio-2-3">
+                        </div>
+                        <label for="radio-2-3" class="popup__label">Доставка и вывоз грунта</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-2" id="radio-2-4">
+                        </div>
+                        <label for="radio-2-4" class="popup__label">Прокладка водопровода и канализации</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-2" id="radio-2-5">
+                        </div>
+                        <label for="radio-2-5" class="popup__label">Копка озер и создание водоемов различного назначения</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-2" id="radio-2-6">
+                        </div>
+                        <label for="radio-2-6" class="popup__label">Другое</label>
+                    </div>
+                </section>
+            </div>
+            <div class="popup__input-wrapper">
+                <input class="popup__input" type="text" required id="popup-input-time">
+                <label class="popup__input-label" for="popup-input-time">Время аренды спецтехники</label>
+            </div>
+        </div>
+        <div class="popup__body popup__body-next">
+            <div class="popup__input-wrapper">
+                <input class="popup__input" type="text" required id="popup-input-name">
+                <label class="popup__input-label" for="popup-input-name">Ваше имя</label>
+            </div>
+            <div class="popup__input-wrapper">
+                <input class="popup__input" type="text" required id="popup-input-number">
+                <label class="popup__input-label" for="popup-input-number">Ваш номер телефона</label>
+            </div>
+            <div class="popup__textarrea-wrapper">
+                <textarea class="popup__textarrea" required></textarea>
+                <label class="popup__textarrea-label" for="popup-input-number">Задайте вопрос (необязательно)</label>
+            </div>
+            <button class="btn-request popup__btn popup__btn_mt" type="submit">Отправить</button>
+        </div>
+        <div class="popup__footer">
+            <div class="popup__btn-wrapper">
+                <button class="btn-request popup__btn popup__btn-slide" type="button">Следующий шаг</button>
+            </div>
+        </div>
+    </form>
     <header class="header">
         <div class="container">
             <nav class="nav">
@@ -60,7 +178,7 @@
                             <p class="benefits__title">Работаем по договору</p>
                         </li>
                     </ul>
-                    <button class="btn-request btn-request_mt">Связаться с нами</button>
+                    <button class="btn-request btn-request_mt" data-request="#btn-request-main">Связаться с нами</button>
                 </div>
                 <div class="swiper">
                     <div class="swiper-wrapper">
@@ -560,4 +678,6 @@
     <script src="script/serviceLine.js"></script>
     <script src="script/planArrows.js"></script>
     <script src="script/accordion.js"></script>
+    <script src="script/formAppearAndHide.js"></script>
+    <script src="script/radio.js"></script>
 </body>
