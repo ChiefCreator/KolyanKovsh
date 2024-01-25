@@ -25,6 +25,9 @@ button {
 body {
   font-family: "Gilroy";
 }
+body.lock {
+  overflow-y: hidden;
+}
 
 .container {
   max-width: 1400px;
@@ -1206,13 +1209,29 @@ body {
   width: 100%;
 }
 
+.overblock {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  visibility: hidden;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.overblock.overblock_act {
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .popup {
   position: fixed;
   top: 0;
   left: 100%;
   width: 500px;
   height: 100vh;
-  padding: 20px;
   background-color: rgb(110, 110, 110);
   z-index: 3;
   display: -webkit-box;
@@ -1238,11 +1257,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 2px solid gray;
+  padding: 20px;
 }
 .popup .popup__head .popup__title-head {
   font-weight: 500;
   font-size: 23px;
-  color: white;
+  color: rgb(242, 242, 242);
 }
 .popup .popup__head .popup__btn-close {
   width: 40px;
@@ -1269,12 +1290,13 @@ body {
   font-weight: 900;
   font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
   font-size: 30px;
-  color: white;
+  color: rgb(242, 242, 242);
 }
 .popup .popup__body {
   overflow: hidden;
   -webkit-transition: height 0.5s ease;
   transition: height 0.5s ease;
+  padding: 0 20px 0 20px;
 }
 .popup .popup__body.popup__body-prev {
   height: 100%;
@@ -1372,7 +1394,7 @@ body {
   background-color: transparent;
   outline: none;
   border: none;
-  color: white;
+  color: rgb(206, 206, 206);
 }
 .popup .popup__body .popup__input-wrapper .popup__input:focus + .popup__input-label, .popup .popup__body .popup__input-wrapper .popup__input:valid + .popup__input-label {
   top: 0;
@@ -1387,7 +1409,7 @@ body {
   background-color: rgb(110, 110, 110);
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  color: rgb(173, 173, 173);
+  color: rgb(206, 206, 206);
   font-size: 14px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -1407,7 +1429,7 @@ body {
   background-color: transparent;
   outline: none;
   border: none;
-  color: white;
+  color: rgb(206, 206, 206);
 }
 .popup .popup__body .popup__textarrea-wrapper .popup__textarrea:focus + .popup__textarrea-label, .popup .popup__body .popup__textarrea-wrapper .popup__textarrea:valid + .popup__textarrea-label {
   top: 0;
@@ -1422,7 +1444,7 @@ body {
   background-color: rgb(110, 110, 110);
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  color: rgb(173, 173, 173);
+  color: rgb(206, 206, 206);
   font-size: 14px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -1431,5 +1453,6 @@ body {
   margin-top: 20px;
 }
 .popup .popup__footer {
+  padding: 0 20px 20px 20px;
   margin-top: auto;
 }
