@@ -558,6 +558,9 @@ body {
   margin-top: 5px;
   margin-bottom: 30px;
 }
+.car-list .car-list__item .car-list__card .btn-request {
+  margin-right: auto;
+}
 
 .service-grid {
   display: -ms-grid;
