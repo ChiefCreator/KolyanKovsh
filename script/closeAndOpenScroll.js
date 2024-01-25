@@ -1,6 +1,6 @@
 // Работа со скроллом при скрытии и появлении формы
 function scroll() {
-    let btnRequests = document.querySelectorAll(".btn-request");
+    let btnRequests = document.querySelectorAll(".btn-popup");
     let body = document.querySelector("body");
     let lockPadding = document.querySelectorAll(".lock-padding");
     let overblock = document.querySelector(".overblock");
