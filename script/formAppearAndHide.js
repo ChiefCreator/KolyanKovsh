@@ -14,6 +14,14 @@ function openHideForms() {
                 let form = document.querySelector(`${data}`);
                 overblock.classList.add("overblock_act");
 
+                let btnSlide = form.querySelector(".popup__btn-slide");
+                let bodyPrev;
+                let bodyNext;
+                if (btnSlide) {
+                    bodyPrev = form.querySelector('.popup__body-prev');
+                    bodyNext = form.querySelector('.popup__body-next');
+                }
+
                 if (form) {
                     form.classList.toggle("popup_act");
 
@@ -22,28 +30,39 @@ function openHideForms() {
                         if (!mobNav.classList.contains("mobile-nav_act")) {
                             overblock.classList.remove("overblock_act");
                         }
+
                         form.classList.remove("popup_act");
+
+                        if (btnSlide) {
+                            setTimeout(function() {
+                                nextStep()
+                                bodyPrev.classList.add('open')
+                            },500) 
+                        } 
                     })
 
                     overblock.addEventListener("click", function() {
                         if (!mobNav.classList.contains("mobile-nav_act")) {
                             overblock.classList.remove("overblock_act");
                         }
+
                         if (!form.classList.contains("popup_act")) {
                             mobNav.classList.remove("mobile-nav_act")
                             overblock.classList.remove("overblock_act");
                         }
-                        form.classList.remove("popup_act");
-                    })
 
-                    let btnSlide = form.querySelector(".popup__btn-slide");
-                    let bodyPrev;
-                    let bodyNext;
+                        form.classList.remove("popup_act");
+
+                        if (btnSlide) {
+                            setTimeout(function() {
+                                nextStep()
+                                bodyPrev.classList.add('open')
+                            },500) 
+                        } 
+                    })
 
                     if (btnSlide) {
                         btnSlide.addEventListener("click", function() {
-                            bodyPrev = form.querySelector('.popup__body-prev');
-                            bodyNext = form.querySelector('.popup__body-next');
     
                             if (bodyPrev.classList.contains('open')) {
                                 prevStep()
