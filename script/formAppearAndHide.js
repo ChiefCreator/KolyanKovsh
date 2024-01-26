@@ -30,22 +30,25 @@ function openHideForms() {
                     let btnSlide = form.querySelector(".popup__btn-slide");
                     let bodyPrev;
                     let bodyNext;
-                    btnSlide.addEventListener("click", function() {
-                        bodyPrev = form.querySelector('.popup__body-prev');
-                        bodyNext = form.querySelector('.popup__body-next');
 
-                        if (bodyPrev.classList.contains('open')) {
-                            prevStep()
-                            setTimeout(function() {
-                                bodyPrev.classList.remove("open")
-                            },0)
-                        } else {
-                            nextStep()
-                            setTimeout(function() {
-                                bodyPrev.classList.add("open")
-                            },0)
-                        }
-                    })
+                    if (btnSlide) {
+                        btnSlide.addEventListener("click", function() {
+                            bodyPrev = form.querySelector('.popup__body-prev');
+                            bodyNext = form.querySelector('.popup__body-next');
+    
+                            if (bodyPrev.classList.contains('open')) {
+                                prevStep()
+                                setTimeout(function() {
+                                    bodyPrev.classList.remove("open")
+                                },0)
+                            } else {
+                                nextStep()
+                                setTimeout(function() {
+                                    bodyPrev.classList.add("open")
+                                },0)
+                            }
+                        })
+                    }
                     function nextStep() {
                         bodyPrev.classList.remove("popup__body-prev_act")
                         bodyNext.classList.remove("popup__body-next_act")

@@ -1356,6 +1356,9 @@ body.lock {
   overflow: hidden;
   cursor: pointer;
 }
+.popup .popup__body .popup__radio-choice .popup__radio-content .popup__radio-wrapper .popup__radio-div.danger {
+  border: 2px solid red;
+}
 .popup .popup__body .popup__radio-choice .popup__radio-content .popup__radio-wrapper .popup__radio-div::before {
   content: "";
   position: absolute;
@@ -1399,6 +1402,12 @@ body.lock {
   border: 2px solid rgb(102, 105, 114);
   border-radius: 10px;
   position: relative;
+}
+.popup .popup__body .popup__input-wrapper.danger {
+  border: 2px solid red;
+}
+.popup .popup__body .popup__input-wrapper.success {
+  border: 2px solid rgb(17, 197, 17);
 }
 .popup .popup__body .popup__input-wrapper .popup__input {
   width: 100%;
