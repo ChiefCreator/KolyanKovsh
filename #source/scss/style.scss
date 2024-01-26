@@ -119,6 +119,134 @@ body{
             }
         }
     }
+    .nav__burger{
+        cursor: pointer;
+        &::before{
+            content: '\f0c9';
+                font-family: $awesome-font;
+                font-weight: 900;
+                font-size: 30px;
+                color: $form-color;
+        }
+        display: none;
+    }
+}
+.mobile-nav{
+    display: none;
+}
+@media screen and (max-width:940px){
+    .mobile-nav{
+        display: block;
+        box-sizing: content-box;
+        position: fixed;
+        top:0;
+        right: -100%;
+        width: calc(500px - 17px);
+        height: 100%;
+        background-color: $form-bg;
+        z-index: 4;
+        transition: right .5s ease;
+        &.mobile-nav_act{
+            right: 0;
+        }
+        .mobile-nav__head{
+            color:$form-color;
+            padding: 20px;
+            border-bottom: 2px solid $form-color-secondary;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .mobile-nav__title{
+                font-weight: 500;
+                font-size: 23px;
+            }
+            .mobile-nav__close::before{
+                cursor: pointer;
+                content: '\f00d';
+                font-family: $awesome-font;
+                font-weight: 900;
+                font-size: 30px;
+                color: $form-color;
+            }
+        }
+        .mobile-nav__body{
+            padding: 20px;
+            .mobile-nav__list{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .mobile-nav__link{
+                    color: $form-color;
+                    font-size: 19px;
+                    cursor: pointer;
+                }
+            }
+            .nav__contacts{
+                display: flex;
+                gap: 20px;
+                &.nav__contacts_mt{
+                    margin-top: 20px;
+                }
+                .nav__contact{
+                    min-width: 100px;
+                    display: flex;
+                    align-items: center;
+                    border: 2px solid rgb(187, 187, 187);
+                    border-radius: 10px;
+                    padding-right: 7px;
+                    gap: 0px;
+                    transition: all .3s ease;
+                    cursor: pointer;
+                    &.nav__contact-1{
+                        background-color: $main-bg;
+                        border: 2px solid $main-bg;
+                        &:hover{
+                            background-color: transparent;
+                        }
+                    }
+                    &.nav__contact-2{
+                        &:hover{
+                            background-color: rgb(187, 187, 187);
+                        }
+                    }
+                    .nav__icon-contact{
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        &::before{
+                            content: '\f0e0';
+                            font-size: 20px;
+                            color: white;
+                            font-weight: 900;
+                            font-family: $awesome-font;
+                        }
+                        &.nav__icon-contact-1::before{
+                            content: '\f095';
+                        }
+                    }
+                    .nav__text-contact{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .nav{
+        grid-template-columns: 11fr 1fr;
+        justify-content: space-between;
+        .nav__burger{
+            display: block;
+        }
+        .nav__navigation{
+            display: none;
+        }
+        .nav__contacts{
+            display: none;
+        }
+    }
 }
 
 .brand{
@@ -938,7 +1066,7 @@ body{
     width: 500px;
     height: 100vh;
     background-color: $form-bg;
-    z-index: 3;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     transition: left .3s ease;

@@ -1,6 +1,7 @@
 // Скрытие и появление формы
 function openHideForms() {
 
+    let mobNav = document.querySelector(".mobile-nav");
     let btnRequests = document.querySelectorAll(".btn-popup");
     let overblock = document.querySelector(".overblock");
 
@@ -18,13 +19,21 @@ function openHideForms() {
 
                     let btnClose = form.querySelector(".popup__btn-close");
                     btnClose.addEventListener("click", function() {
+                        if (!mobNav.classList.contains("mobile-nav_act")) {
+                            overblock.classList.remove("overblock_act");
+                        }
                         form.classList.remove("popup_act");
-                        overblock.classList.remove("overblock_act");
                     })
 
                     overblock.addEventListener("click", function() {
+                        if (!mobNav.classList.contains("mobile-nav_act")) {
+                            overblock.classList.remove("overblock_act");
+                        }
+                        if (!form.classList.contains("popup_act")) {
+                            mobNav.classList.remove("mobile-nav_act")
+                            overblock.classList.remove("overblock_act");
+                        }
                         form.classList.remove("popup_act");
-                        overblock.classList.remove("overblock_act");
                     })
 
                     let btnSlide = form.querySelector(".popup__btn-slide");

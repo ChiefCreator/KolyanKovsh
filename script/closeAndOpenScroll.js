@@ -28,7 +28,7 @@ function scroll() {
     function bodyLock(){
         const lockPaddingValue = window.innerWidth - document.querySelector('body').offsetWidth + 'px';
         
-        if (lockPadding > 0) {
+        if (lockPadding.length > 0) {
             lockPadding.forEach(el => {
                 el.style.paddingRight = lockPaddingValue;
             })
@@ -39,7 +39,7 @@ function scroll() {
     }
     function bodyunLock() {
         setTimeout(function() {
-            if (lockPadding > 0) {
+            if (lockPadding.length > 0) {
                 lockPadding.forEach(el => {
                     el.style.paddingRight = 0;
                 })
