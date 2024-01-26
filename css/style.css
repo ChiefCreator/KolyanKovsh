@@ -1632,4 +1632,67 @@ body.lock {
 .popup .popup__footer {
   padding: 0 20px 20px 20px;
   margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.popup .popup__footer .progress-ring-wrapper {
+  position: relative;
+}
+.popup .popup__footer .progress-ring-wrapper .progress-ring__circle {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: stroke-dashoffset 0.3s ease;
+  transition: stroke-dashoffset 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+.popup .popup__footer .progress-ring-wrapper .progress-ring__circle-border {
+  position: relative;
+  z-index: 1;
+}
+.popup .popup__footer .progress-ring-wrapper .progress-ring-wrapper__num {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: rgb(242, 242, 242);
+}
+
+.popup__btn-slide {
+  background-color: rgb(102, 105, 114);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.popup__btn-slide::before {
+  content: "\f064";
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+  font-weight: 900;
+  font-size: 30px;
+  color: rgb(242, 242, 242);
+}
+.popup__btn-slide.popup__btn-slide_act::before {
+  content: "\f3e5";
+}
+.popup__btn-slide:hover {
+  background-color: rgb(118, 121, 129);
+}
+.popup__btn-slide:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }

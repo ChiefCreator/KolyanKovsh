@@ -1272,5 +1272,56 @@ body{
     .popup__footer{
         padding: 0 20px 20px 20px;
         margin-top: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .progress-ring-wrapper{
+            position: relative;
+            .progress-ring__circle{
+                transform-origin: center;
+                transform: rotate(-90deg);
+                transition: stroke-dashoffset .3s ease;
+                position: relative;
+                z-index: 2;
+            }
+            .progress-ring__circle-border{
+                position: relative;
+                z-index: 1;
+            }
+            .progress-ring-wrapper__num{
+                position: absolute;
+                top:50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                font-size: 20px;
+                color: $form-color;
+            }
+        }
+        
+    }
+}
+.popup__btn-slide{
+    background-color: $form-color-secondary;
+    padding: 10px;  
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color .3s ease, transform .3s ease;
+    &::before{
+        content: '\f064';
+        font-family: $awesome-font;
+        font-weight: 900;
+        font-size: 30px;
+        color: $form-color;
+    }
+    &.popup__btn-slide_act{
+        &::before{
+            content: '\f3e5';
+        }
+    }
+    &:hover{
+        background-color: rgb(118, 121, 129);
+    }
+    &:active{
+        transform: scale(.9);
     }
 }
