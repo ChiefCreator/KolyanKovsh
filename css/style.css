@@ -35,10 +35,6 @@ body.lock {
   margin: 0 auto;
 }
 
-.container_sm {
-  max-width: 1000px;
-}
-
 .header {
   min-height: 100vh;
   background-position: center;
@@ -121,15 +117,23 @@ body.lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid rgb(187, 187, 187);
+  border: 2px solid rgb(187, 187, 187);
   border-radius: 10px;
   padding-right: 7px;
   gap: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 .nav .nav__contacts .nav__contact.nav__contact-1 {
   background-color: rgb(212, 159, 0);
-  border: 1px solid rgb(212, 159, 0);
+  border: 2px solid rgb(212, 159, 0);
+}
+.nav .nav__contacts .nav__contact.nav__contact-1:hover {
+  background-color: transparent;
+}
+.nav .nav__contacts .nav__contact.nav__contact-2:hover {
+  background-color: rgb(187, 187, 187);
 }
 .nav .nav__contacts .nav__contact .nav__icon-contact {
   width: 35px;
@@ -1232,7 +1236,7 @@ body.lock {
   left: 100%;
   width: 500px;
   height: 100vh;
-  background-color: rgb(110, 110, 110);
+  background-color: rgb(71, 74, 81);
   z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1257,7 +1261,7 @@ body.lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 2px solid gray;
+  border-bottom: 2px solid rgb(102, 105, 114);
   padding: 20px;
 }
 .popup .popup__head .popup__title-head {
@@ -1283,7 +1287,7 @@ body.lock {
   transition: background-color 0.3s ease;
 }
 .popup .popup__head .popup__btn-close:hover {
-  background-color: rgb(117, 117, 117);
+  background-color: rgb(102, 105, 114);
 }
 .popup .popup__head .popup__btn-close::before {
   content: "\f00d";
@@ -1309,6 +1313,14 @@ body.lock {
 }
 .popup .popup__body.popup__body-next.popup__body-next_act {
   height: 100%;
+}
+.popup .popup__body.popup__body-next_display {
+  height: 100%;
+}
+.popup .popup__body .popup__body__text {
+  color: rgb(242, 242, 242);
+  font-size: 15px;
+  margin-top: 20px;
 }
 .popup .popup__body .popup__radio-choice .popup__subtitle {
   color: rgb(242, 242, 242);
@@ -1384,7 +1396,7 @@ body.lock {
   margin-top: 20px;
   width: 100%;
   height: 40px;
-  border: 2px solid gray;
+  border: 2px solid rgb(102, 105, 114);
   border-radius: 10px;
   position: relative;
 }
@@ -1406,7 +1418,7 @@ body.lock {
   top: 50%;
   left: 3px;
   padding: 0 5px;
-  background-color: rgb(110, 110, 110);
+  background-color: rgb(71, 74, 81);
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   color: rgb(206, 206, 206);
@@ -1419,7 +1431,7 @@ body.lock {
   width: 100%;
   min-height: 120px;
   resize: vertical;
-  border: 2px solid gray;
+  border: 2px solid rgb(102, 105, 114);
   border-radius: 10px;
   position: relative;
 }
@@ -1441,7 +1453,7 @@ body.lock {
   top: 15px;
   left: 3px;
   padding: 0 5px;
-  background-color: rgb(110, 110, 110);
+  background-color: rgb(71, 74, 81);
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   color: rgb(206, 206, 206);

@@ -26,9 +26,6 @@ body{
     padding: 0 15px;
     margin: 0 auto;
 }
-.container_sm{
-    max-width: 1000px;
-}
 
 .header{
     min-height: 100vh;
@@ -81,14 +78,23 @@ body{
             min-width: 100px;
             display: flex;
             align-items: center;
-            border: 1px solid rgb(187, 187, 187);
+            border: 2px solid rgb(187, 187, 187);
             border-radius: 10px;
             padding-right: 7px;
             gap: 0px;
+            transition: all .3s ease;
             cursor: pointer;
             &.nav__contact-1{
                 background-color: $main-bg;
-                border: 1px solid $main-bg;
+                border: 2px solid $main-bg;
+                &:hover{
+                    background-color: transparent;
+                }
+            }
+            &.nav__contact-2{
+                &:hover{
+                    background-color: rgb(187, 187, 187);
+                }
             }
             .nav__icon-contact{
                 width: 35px;
@@ -931,7 +937,7 @@ body{
     left: 100%;
     width: 500px;
     height: 100vh;
-    background-color: rgb(110, 110, 110);
+    background-color: $form-bg;
     z-index: 3;
     display: flex;
     flex-direction: column;
@@ -960,7 +966,7 @@ body{
             cursor: pointer;
             transition: background-color .3s ease;
             &:hover{
-                background-color: rgb(117, 117, 117);
+                background-color: $form-color-secondary
             }
             &::before{
                 content: '\f00d';
@@ -986,6 +992,14 @@ body{
             &.popup__body-next_act{
                 height: 100%;
             }
+        }
+        &.popup__body-next_display{
+            height: 100%;
+        }
+        .popup__body__text{
+            color: $form-color;
+            font-size: 15px;
+            margin-top: 20px;
         }
         .popup__radio-choice{
             .popup__subtitle{
@@ -1074,7 +1088,7 @@ body{
                 top:50%;
                 left: 3px;
                 padding: 0 5px;
-                background-color: rgb(110, 110, 110);
+                background-color: $form-bg;
                 transform: translate(0,-50%);
                 color: $form-color-third;
                 font-size: 14px;
@@ -1107,7 +1121,7 @@ body{
                 top:15px;
                 left: 3px;
                 padding: 0 5px;
-                background-color: rgb(110, 110, 110);
+                background-color: $form-bg;
                 transform: translate(0,-50%);
                 color: $form-color-third;
                 font-size: 14px;

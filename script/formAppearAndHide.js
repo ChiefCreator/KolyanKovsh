@@ -1,7 +1,7 @@
 // Скрытие и появление формы
 function openHideForms() {
 
-    let btnRequests = document.querySelectorAll(".btn-request");
+    let btnRequests = document.querySelectorAll(".btn-popup");
     let overblock = document.querySelector(".overblock");
 
     btnRequests.forEach(btnRequest => {
