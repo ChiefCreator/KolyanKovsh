@@ -1,9 +1,11 @@
 // Работа со скроллом при скрытии и появлении формы
 function scroll() {
-    let btnRequests = document.querySelectorAll(".btn-popup");
+    let btnRequests = document.querySelectorAll(".btn-manage-scroll");
     let body = document.querySelector("body");
     let lockPadding = document.querySelectorAll(".lock-padding");
     let overblock = document.querySelector(".overblock");
+    let mobNav = document.querySelector(".mobile-nav");
+    let popups = document.querySelectorAll(".popup");
 
     let timeout = 500;
 
@@ -18,12 +20,30 @@ function scroll() {
     if (formClosebtns.length > 0) {
         formClosebtns.forEach(formClosebtn => {
             formClosebtn.addEventListener("click", function() {
+
+                let arrPopup = [];
+                popups.forEach(popup => {
+                    if (popup.classList.contains("popup_act")) arrPopup.push(popup)
+                })
+                if (mobNav.classList.contains("mobile-nav_act") && arrPopup.length > 0) {
+                    return;
+                }
                 bodyunLock();
             })
         })
     }
     overblock.addEventListener("click", function() {
-        bodyunLock();
+        let arrPopup = [];
+                popups.forEach(popup => {
+                    if (popup.classList.contains("popup_act")) arrPopup.push(popup)
+                })
+                if (mobNav.classList.contains("mobile-nav_act") && arrPopup.length > 0) {
+                    console.log(arrPopup)
+                    return;
+                }
+                mobNav.classList.remove("mobile-nav_act")
+                overblock.classList.remove("overblock_act")
+                bodyunLock();
     })
     function bodyLock(){
         const lockPaddingValue = window.innerWidth - document.querySelector('body').offsetWidth + 'px';

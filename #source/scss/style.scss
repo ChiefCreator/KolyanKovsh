@@ -147,7 +147,7 @@ body{
         z-index: 4;
         transition: left .5s ease;
         &.mobile-nav_act{
-            left: calc(100% - 480px);
+            left: calc(100% - 483px);
         }
         .mobile-nav__head{
             color:$form-color;
@@ -1174,7 +1174,7 @@ body{
     position: fixed;
     top:0;
     left: 100%;
-    width: 500px;
+    width: 483px;
     height: 100vh;
     background-color: $form-bg;
     z-index: 5;
@@ -1182,7 +1182,7 @@ body{
     flex-direction: column;
     transition: left .3s ease;
     &.popup_act{
-        left: calc(100% - 500px);
+        left: calc(100% - 483px);
     }
     .popup__head{
         display: flex;

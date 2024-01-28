@@ -194,7 +194,7 @@ body.lock {
     transition: left 0.5s ease;
   }
   .mobile-nav.mobile-nav_act {
-    left: calc(100% - 480px);
+    left: calc(100% - 483px);
   }
   .mobile-nav .mobile-nav__head {
     color: rgb(242, 242, 242);
@@ -1514,7 +1514,7 @@ body.lock {
   position: fixed;
   top: 0;
   left: 100%;
-  width: 500px;
+  width: 483px;
   height: 100vh;
   background-color: rgb(71, 74, 81);
   z-index: 5;
@@ -1529,7 +1529,7 @@ body.lock {
   transition: left 0.3s ease;
 }
 .popup.popup_act {
-  left: calc(100% - 500px);
+  left: calc(100% - 483px);
 }
 .popup .popup__head {
   display: -webkit-box;

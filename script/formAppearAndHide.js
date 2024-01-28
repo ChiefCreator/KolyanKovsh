@@ -53,14 +53,6 @@ function openHideForms() {
 
                     // скрытие формы, мобильной навигации и затемненного фона по клику на затемненный фон
                     overblock.addEventListener("click", function() {
-                        if (!mobNav.classList.contains("mobile-nav_act")) {
-                            overblock.classList.remove("overblock_act");
-                        }
-
-                        if (!form.classList.contains("popup_act")) {
-                            mobNav.classList.remove("mobile-nav_act")
-                            overblock.classList.remove("overblock_act");
-                        }
 
                         form.classList.remove("popup_act");
 
