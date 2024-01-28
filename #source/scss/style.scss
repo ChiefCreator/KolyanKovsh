@@ -10,6 +10,12 @@
 
 @import '../scss/variables.scss';
 
+// Стилизация html
+
+html{
+    scroll-behavior: smooth;
+}
+
 // Стилизация body
 
 body{

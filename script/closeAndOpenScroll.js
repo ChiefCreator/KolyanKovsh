@@ -45,6 +45,14 @@ function scroll() {
                 overblock.classList.remove("overblock_act")
                 bodyunLock();
     })
+    let lies = document.querySelectorAll(".mobile-nav__link");
+    lies.forEach(li => {
+        li.addEventListener("click", function() {
+            mobNav.classList.remove("mobile-nav_act");
+            overblock.classList.remove("overblock_act");
+            bodyunLock();
+        })
+    })
     function bodyLock(){
         const lockPaddingValue = window.innerWidth - document.querySelector('body').offsetWidth + 'px';
         
