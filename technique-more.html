@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>KolyanKovsh</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="overblock"></div>
+    <form class="popup" id="btn-request-main" novalidate>
+        <header class="popup__head">
+            <h3 class="popup__title-head">Обратная связь</h3>
+            <div class="popup__btn-close"></div>
+        </header>
+        <div class="popup__body popup__body-prev open">
+            <div class="popup__radio-choice">
+                <h4 class="popup__subtitle">Выберите вид техники:</h4>
+                <section class="popup__radio-content">
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div popup__radio-div_act">
+                            <input class="popup__radio" type="radio" name="popup-radio-1" id="radio-1-1" checked>
+                        </div>
+                        <label for="radio-1-1" class="popup__label">Полноповоротный колёсный экскаватор DOOSAN DX210W</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-1" id="radio-1-2">
+                        </div>
+                        <label for="radio-1-2" class="popup__label">Экскаватор-погрузчик 4CX и JCB 5CX</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-1" id="radio-1-3">
+                        </div>
+                        <label for="radio-1-3" class="popup__label">Мини-экскаватор JCB 8030 ZTS</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-1" id="radio-1-4">
+                        </div>
+                        <label for="radio-1-4" class="popup__label">Самосвал МАЗ</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-1" id="radio-1-5">
+                        </div>
+                        <label for="radio-1-5" class="popup__label">Виброкаток Changlin</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-1" id="radio-1-6">
+                        </div>
+                        <label for="radio-1-6" class="popup__label">Трал для перевозки спецтехники</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-1" id="radio-1-7">
+                        </div>
+                        <label for="radio-1-7" class="popup__label">Необходима консультация в выборе</label>
+                    </div>
+                </section>
+                <h4 class="popup__subtitle">Выберите вид услуги:</h4>
+                <section class="popup__radio-content">
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div popup__radio-div_act">
+                            <input class="popup__radio" type="radio" name="popup-radio-2" id="radio-2-1" checked>
+                        </div>
+                        <label for="radio-2-1" class="popup__label">Вывоз строительного мусора</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-2" id="radio-2-2">
+                        </div>
+                        <label for="radio-2-2" class="popup__label">Доставка песка</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-2" id="radio-2-3">
+                        </div>
+                        <label for="radio-2-3" class="popup__label">Доставка и вывоз грунта</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-2" id="radio-2-4">
+                        </div>
+                        <label for="radio-2-4" class="popup__label">Прокладка водопровода и канализации</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-2" id="radio-2-5">
+                        </div>
+                        <label for="radio-2-5" class="popup__label">Копка озер и создание водоемов различного назначения</label>
+                    </div>
+                    <div class="popup__radio-wrapper">
+                        <div class="popup__radio-div">
+                            <input class="popup__radio" type="radio" name="popup-radio-2" id="radio-2-6">
+                        </div>
+                        <label for="radio-2-6" class="popup__label">Другое</label>
+                    </div>
+                </section>
+            </div>
+            <div class="popup__input-wrapper">
+                <input class="popup__input" type="text" required id="popup-input-time">
+                <label class="popup__input-label" for="popup-input-time">Время аренды спецтехники</label>
+            </div>
+        </div>
+        <div class="popup__body popup__body-next">
+            <p class="popup__body__text">Введите ваш телефон и мы свяжемся с вами в ближайшее время</p>
+            <div class="popup__input-wrapper">
+                <input class="popup__input" type="text" required id="popup-input-name">
+                <label class="popup__input-label text-validation" for="popup-input-name">Ваше имя</label>
+            </div>
+            <div class="popup__input-wrapper">
+                <input class="popup__input" type="text" required id="popup-input-number">
+                <label class="popup__input-label" for="popup-input-number">Ваш номер телефона</label>
+            </div>
+            <div class="popup__textarrea-wrapper">
+                <textarea class="popup__textarrea" required></textarea>
+                <label class="popup__textarrea-label" for="popup-input-number">Задайте вопрос (необязательно)</label>
+            </div>
+            <button class="btn-request popup__btn popup__btn_mt" type="submit">Отправить</button>
+        </div>
+        <div class="popup__footer">
+            <div class="popup__btn-wrapper">
+                <button class="popup__btn popup__btn-slide" type="button"></button>
+            </div>
+            <div class="progress-ring-wrapper">
+                <svg class="progress-ring" width="70" height="70">
+                    <circle class="progress-ring__circle-border" stroke="rgb(102, 105, 114)" stroke-width="3" cx="35" cy="35" r="29" fill="transparent"/>
+                    <circle class="progress-ring__circle" stroke="rgb(242, 242, 242)" stroke-width="3" cx="35" cy="35" r="29" fill="transparent"/>
+                </svg>
+                <p class="progress-ring-wrapper__num">01</p>
+            </div>
+        </div>
+    </form>
+    <form class="popup" id="btn-request-tel" novalidate>
+        <header class="popup__head">
+            <h3 class="popup__title-head">Обратная связь (по телефону)</h3>
+            <div class="popup__btn-close"></div>
+        </header>
+        <div class="popup__body popup__body-next popup__body popup__body-next_display">
+            <p class="popup__body__text">Введите ваш телефон и мы свяжемся с вами в ближайшее время</p>
+            <div class="popup__input-wrapper">
+                <input class="popup__input" type="text" required id="popup-input-name">
+                <label class="popup__input-label" for="popup-input-name">Ваше имя</label>
+            </div>
+            <div class="popup__input-wrapper">
+                <input class="popup__input" type="text" required id="popup-input-number">
+                <label class="popup__input-label" for="popup-input-number">Ваш номер телефона</label>
+            </div>
+            <div class="popup__textarrea-wrapper">
+                <textarea class="popup__textarrea" required></textarea>
+                <label class="popup__textarrea-label" for="popup-input-number">Задайте вопрос (необязательно)</label>
+            </div>
+            <button class="btn-request popup__btn popup__btn_mt" type="submit">Отправить</button>
+        </div>
+    </form>
+    <form class="popup" id="btn-request-email" novalidate>
+        <header class="popup__head">
+            <h3 class="popup__title-head">Обратная связь (через почту)</h3>
+            <div class="popup__btn-close"></div>
+        </header>
+        <div class="popup__body popup__body-next popup__body popup__body-next_display">
+            <p class="popup__body__text">Введите вашу почту и мы свяжемся с вами в ближайшее время</p>
+            <div class="popup__input-wrapper">
+                <input class="popup__input" type="text" required id="popup-input-name">
+                <label class="popup__input-label" for="popup-input-name">Ваше имя</label>
+            </div>
+            <div class="popup__input-wrapper">
+                <input class="popup__input" type="text" required id="popup-input-email">
+                <label class="popup__input-label" for="popup-input-email">Ваша почта</label>
+            </div>
+            <div class="popup__textarrea-wrapper">
+                <textarea class="popup__textarrea" required></textarea>
+                <label class="popup__textarrea-label" for="popup-input-number">Задайте вопрос (необязательно)</label>
+            </div>
+            <button class="btn-request popup__btn popup__btn_mt" type="submit">Отправить</button>
+        </div>
+    </form>
+    <div class="mobile-nav lock-padding">
+        <header class="mobile-nav__head">
+            <h2 class="mobile-nav__title">Меню</h2>
+            <div class="mobile-nav__close popup__btn-close"></div>
+        </header>
+        <div class="mobile-nav__body">
+            <ul class="mobile-nav__list">
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="index.html">Техника</a></li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="index.html">Оборудование</a></li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="index.html">Услуги</a></li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="index.html">План работы</a></li>
+            </ul>
+            <div class="nav__contacts nav__contacts_mt">
+                <div class="nav__contact nav__contact-1 btn-popup" data-request="#btn-request-tel">
+                    <div class="nav__icon-contact nav__icon-contact-1">
+                        
+                    </div>
+                    <p class="nav__text-contact">Телефон</p>
+                </div>
+                <div class="nav__contact nav__contact-2 btn-popup" data-request="#btn-request-email">
+                    <div class="nav__icon-contact">
+                        
+                    </div>
+                    <p class="nav__text-contact">Почта</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="header header_sm">
+        <div class="container">
+            <nav class="nav nav-technique-more">
+                <a class="brand nav__brand" href="index.html"><span class="brand-left nav-color-dark">Kolyan</span><span class="brand-right">Kovsh</span></a>
+                <div class="nav__navigation">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link nav-color-dark" href="index.html">Техника</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link nav-color-dark" href="index.html">Оборудование</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link nav-color-dark" href="index.html">Услуги</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link nav-color-dark" href="index.html">План работы</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav__contacts">
+                    <div class="nav__contact nav__contact-1 btn-popup btn-manage-scroll" data-request="#btn-request-tel">
+                        <div class="nav__icon-contact nav__icon-contact-1">
+                            
+                        </div>
+                        <p class="nav__text-contact">Телефон</p>
+                    </div>
+                    <div class="nav__contact nav__contact-2 btn-popup btn-manage-scroll" data-request="#btn-request-email">
+                        <div class="nav__icon-contact">
+                            
+                        </div>
+                        <p class="nav__text-contact">Почта</p>
+                    </div>
+                </div>
+                <div class="nav__burger btn-manage-scroll">
+                    
+                </div>
+            </nav>
+            <section class="technique-more">
+                <div class="container">
+                    <div class="technique-choice">
+                        <div class="technique-choice__indicator"></div>
+                        <ul class="technique-choice__list">
+                            <li class="technique-choice__item" data-tab="#tab1">Полноповоротный колёсный экскаватор</li>
+                            <li class="technique-choice__item" data-tab="#tab2">Экскаватор-погрузчик</li>
+                            <li class="technique-choice__item" data-tab="#tab3">Мини-экскаватор</li>
+                            <li class="technique-choice__item" data-tab="#tab4">Самосвал МАЗ</li>
+                            <li class="technique-choice__item" data-tab="#tab5">Виброкаток Changlin</li>
+                            <li class="technique-choice__item" data-tab="#tab6">Трал для перевозки спецтехники</li>
+                        </ul>
+                    </div>
+                    <div class="technique-tabs">
+                        <div class="technique-tabs__content" id="tab1">
+                            <div class="technique-tabs__auto-height">
+                                <header class="technique-tabs__head">
+                                    <div class="technique-tabs__slider">
+                                        <div class="swiper">         
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="img/img-car-list-1.jpg"></div>
+                                                <div class="swiper-slide"><img src="img/technique-more-img-1.jpg"></div>
+                                            </div>
+                                            <div class="technique-tabs__slider-btns">
+                                                <div class="swiper-technique-prev"></div>
+                                                <div class="swiper-technique-next"></div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class="technique-tabs__head-title">
+                                        <h2 class="technique-tabs__title">ЭКСКАВАТОР-ПОГРУЗЧИК 4CX И JCB 5CX</h2>
+                                        <button class="btn-request btn-popup btn-manage-scroll" data-request="#btn-request-main">Заказать</button>
+                                    </div>
+                                </header>
+                                <div class="technique-tabs__text-wrap">
+                                    <div class="technique-tabs__icon"></div>
+                                    <p class="technique-tabs__text">Глубина копания: До 6,5 метров. Эта особенность делает его идеальным для глубоких земляных работ.</p>
+                                </div>
+                                <div class="technique-tabs__text-wrap">
+                                    <div class="technique-tabs__icon"></div>
+                                    <p class="technique-tabs__text">Телескопическая стрела: Повышает гибкость и дальность действия, позволяя работать в труднодоступных местах.</p>
+                                </div>
+                    
+                                <h3 class="technique-tabs__subtitle">Применение:</h3>
+                                <ul class="technique-tabs__advantages">
+                                    <li class="technique-tabs__item">Копка траншей и котлованов: Идеально подходит для создания траншей для укладки коммуникаций или копки котлованов под фундаменты.</li>
+                                    <li class="technique-tabs__item">Монтаж канализационных колец: Телескопическая стрела позволяет точно манипулировать и устанавливать канализационные кольца.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="technique-tabs__content" id="tab2">
+                            <div class="technique-tabs__auto-height">
+                                <header class="technique-tabs__head">
+                                    <div class="technique-tabs__slider">
+                                        <div class="swiper">         
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="img/img-car-list-2.png"></div>
+                                                <div class="swiper-slide"><img src="img/technique-more-img-2.jpg"></div>
+                                            </div>
+                                            <div class="technique-tabs__slider-btns">
+                                                <div class="swiper-technique-prev"></div>
+                                                <div class="swiper-technique-next"></div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class="technique-tabs__head-title">
+                                        <h2 class="technique-tabs__title">ПОЛНОПОВОРОТНЫЙ КОЛЁСНЫЙ ЭКСКАВАТОР DOOSAN DX210W</h2>
+                                        <button class="btn-request btn-popup btn-manage-scroll" data-request="#btn-request-main">Заказать</button>
+                                    </div>
+                                </header>
+                                <div class="technique-tabs__text-wrap">
+                                    <div class="technique-tabs__icon"></div>
+                                    <p class="technique-tabs__text">Мощность: Экскаватор DOOSAN DX210W является одним из самых мощных в своем классе, что позволяет ему справляться с самыми сложными задачами на строительной площадке.</p>
+                                </div>
+                                <div class="technique-tabs__text-wrap">
+                                    <div class="technique-tabs__icon"></div>
+                                    <p class="technique-tabs__text">Объем ковша: 1.1 кубических метров. Этот объем ковша обеспечивает высокую производительность при копке и перемещении материалов.</p>
+                                </div>
+                    
+                                <h3 class="technique-tabs__subtitle">Особенности и преимущества:</h3>
+                                <ul class="technique-tabs__advantages">
+                                    <li class="technique-tabs__item">Полноповоротность: Эта характеристика позволяет экскаватору работать в ограниченном пространстве, поворачиваясь на 360 градусов, что увеличивает его маневренность и эффективность на рабочем месте.</li>
+                                    <li class="technique-tabs__item">Колесная база: Наличие колес вместо гусениц делает этот экскаватор более мобильным и подходящим для работ на твердых и уплотненных поверхностях.</li>
+                                    <li class="technique-tabs__item">Эффективность: Мощность и объем ковша делают DOOSAN DX210W идеальным для выполнения больших объемов земляных работ в короткие сроки.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="technique-tabs__content" id="tab3">
+                            <div class="technique-tabs__auto-height">
+                                <header class="technique-tabs__head">
+                                    <div class="technique-tabs__slider">
+                                        <div class="swiper">         
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="img/img-car-list-3.jpg"></div>
+                                                <div class="swiper-slide"><img src="img/technique-more-img-3.jpg"></div>
+                                            </div>
+                                            <div class="technique-tabs__slider-btns">
+                                                <div class="swiper-technique-prev"></div>
+                                                <div class="swiper-technique-next"></div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class="technique-tabs__head-title">
+                                        <h2 class="technique-tabs__title">МИНИ-ЭКСКАВАТОР</h2>
+                                        <button class="btn-request btn-popup btn-manage-scroll" data-request="#btn-request-main">Заказать</button>
+                                    </div>
+                                </header>
+                                <div class="technique-tabs__text-wrap">
+                                    <div class="technique-tabs__icon"></div>
+                                    <p class="technique-tabs__text">Мини-экскаваторы применяются для рытья траншей, котлована и работы с гидробуром</p>
+                                </div>
+                    
+                                <h3 class="technique-tabs__subtitle">Преимущества</h3>
+                                <ul class="technique-tabs__advantages">
+                                    <li class="technique-tabs__item">Маневренность: они могут работать в любых труднодоступных местах, где использование других видов спецтехники невозможно, и единственным выходом является ручной труд.</li>
+                                    <li class="technique-tabs__item">Нулевой радиус поворота платформы позволяет работать вплотную к объектам без опаски зацепить или повредить</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="technique-tabs__content" id="tab4">
+                            <div class="technique-tabs__auto-height">
+                                <header class="technique-tabs__head">
+                                    <div class="technique-tabs__slider">
+                                        <div class="swiper">         
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="img/img-car-list-4.jpg"></div>
+                                                <div class="swiper-slide"><img src="img/technique-more-img-4.jpg"></div>
+                                            </div>
+                                            <div class="technique-tabs__slider-btns">
+                                                <div class="swiper-technique-prev"></div>
+                                                <div class="swiper-technique-next"></div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class="technique-tabs__head-title">
+                                        <h2 class="technique-tabs__title">САМОСВАЛЫ МАЗ</h2>
+                                        <button class="btn-request btn-popup btn-manage-scroll" data-request="#btn-request-main">Заказать</button>
+                                    </div>
+                                </header>
+                                <div class="technique-tabs__text-wrap">
+                                    <div class="technique-tabs__icon"></div>
+                                    <p class="technique-tabs__text">Самосвалы МАЗ являются одними из самых надежных и востребованных транспортных средств в строительной отрасли благодаря своей высокой грузоподъемности и универсальности.</p>
+                                </div>
+                                <div class="technique-tabs__text-wrap">
+                                    <div class="technique-tabs__icon"></div>
+                                    <p class="technique-tabs__text">Они представлены в нескольких модификациях, что позволяет выбрать оптимальный вариант в зависимости от потребностей конкретного проекта.</p>
+                                </div>
+                    
+                                <h3 class="technique-tabs__subtitle">Грузоподъемность:</h3>
+                                <ul class="technique-tabs__advantages">
+                                    <li class="technique-tabs__item">10 тонн: Эта модель идеально подходит для перевозки средних объемов материалов, особенно в условиях городской застройки или на небольших строительных площадках.</li>
+                                    <li class="technique-tabs__item">20 тонн: Самосвалы этой грузоподъемности больше подходят для крупных строительных проектов, где требуется перевозка больших объемов строительных материалов или отходов.</li>
+                                    <li class="technique-tabs__item">40 тонн: Максимальная грузоподъемность для самых масштабных задач, таких как крупные строительные и дорожные работы, где необходима транспортировка большого количества материалов.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="technique-tabs__content" id="tab5">
+                            <div class="technique-tabs__auto-height">
+                                <header class="technique-tabs__head">
+                                    <div class="technique-tabs__slider">
+                                        <div class="swiper">         
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="img/img-car-list-5.png"></div>
+                                                <div class="swiper-slide"><img src="img/technique-more-img-5.jpg"></div>
+                                            </div>
+                                            <div class="technique-tabs__slider-btns">
+                                                <div class="swiper-technique-prev"></div>
+                                                <div class="swiper-technique-next"></div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class="technique-tabs__head-title">
+                                        <h2 class="technique-tabs__title">ВИБРОКАТОК CHANGLIN</h2>
+                                        <button class="btn-request btn-popup btn-manage-scroll" data-request="#btn-request-main">Заказать</button>
+                                    </div>
+                                </header>
+                                <div class="technique-tabs__text-wrap">
+                                    <div class="technique-tabs__icon"></div>
+                                    <p class="technique-tabs__text">Виброкатки Changlin представляют собой ключевое оборудование в строительной отрасли, используемое для уплотнения различных типов поверхностей, включая грунт, асфальт и другие строительные материалы.</p>
+                                </div>
+                                <h3 class="technique-tabs__subtitle">Мощность и производительность:</h3>
+                                <ul class="technique-tabs__advantages">
+                                    <li class="technique-tabs__item">Виброкатки Changlin обычно оснащены мощными двигателями, которые обеспечивают высокую производительность при уплотнении различных материалов.</li>
+                                    <li class="technique-tabs__item">Они способны работать в различных условиях, включая крутые склоны и неровные поверхности.</li>
+                                    <li class="technique-tabs__item"></li>
+                                </ul>
+                                <h3 class="technique-tabs__subtitle">Применение:</h3>
+                                <ul class="technique-tabs__advantages">
+                                    <li class="technique-tabs__item">Виброкатки Changlin представляют собой ключевое оборудование в строительной отрасли, используемое для уплотнения различных типов поверхностей, включая грунт, асфальт и другие строительные материалы.Виброкатки Changlin широко используются в дорожном строительстве и в других проектах, где требуется уплотнение грунта или асфальта.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="technique-tabs__content" id="tab6">
+                            <div class="technique-tabs__auto-height">
+                                <header class="technique-tabs__head">
+                                    <div class="technique-tabs__slider">
+                                        <div class="swiper">         
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img src="img/img-car-list-6.jpg"></div>
+                                                <div class="swiper-slide"><img src="img/technique-more-img-6.jpg"></div>
+                                            </div>
+                                            <div class="technique-tabs__slider-btns">
+                                                <div class="swiper-technique-prev"></div>
+                                                <div class="swiper-technique-next"></div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class="technique-tabs__head-title">
+                                        <h2 class="technique-tabs__title">ТРАЛ ДЛЯ ПЕРЕВОЗКИ СПЕЦТЕХНИКИ</h2>
+                                        <button class="btn-request btn-popup btn-manage-scroll" data-request="#btn-request-main">Заказать</button>
+                                    </div>
+                                </header>
+                                <div class="technique-tabs__text-wrap">
+                                    <div class="technique-tabs__icon"></div>
+                                    <p class="technique-tabs__text">Наша компания предлагает услуги по перевозке спецтехники с использованием тралов. Это идеальное решение для транспортировки тяжелой и крупногабаритной техники, такой как экскаваторы, погрузчики, самосвалы и другое строительное оборудование.</p>
+                                </div>
+                    
+                                <h3 class="technique-tabs__subtitle">Преимущества использования наших тралов:</h3>
+                                <ul class="technique-tabs__advantages">
+                                    <li class="technique-tabs__item">Безопасность и Надежность: Наши тралы оборудованы специальными креплениями и усиленной платформой, что обеспечивает безопасную и надежную транспортировку вашей техники. Грузоподъемность тралов достигает до 80 тонн.
+                                    </li>
+                                    <li class="technique-tabs__item">Широкий диапазон грузоподъемности: Мы предлагаем тралы с грузоподъемностью от 20 до 80 тонн, что позволяет подобрать оптимальный вариант для перевозки любого вида спецтехники.</li>
+                                    <li class="technique-tabs__item">Опытные водители: Наши водители обладают более чем 10-летним опытом в области перевозок тяжелой техники, что гарантирует её доставку в целости и сохранности.</li>
+                                    <li class="technique-tabs__item">Гибкий график перевозок: Мы организуем транспортировку в удобное для вас время, соблюдая все сроки. Возможность заказа услуги 24/7.</li>
+                                </ul>
+                                <h3 class="technique-tabs__subtitle">Наши услуги идеально подходят для:</h3>
+                                <ul class="technique-tabs__advantages">
+                                    <li class="technique-tabs__item">Строительных компаний, требующих перевозки техники на разные объекты.</li>
+                                    <li class="technique-tabs__item">Частных лиц или организаций, которым необходимо временно переместить спецтехнику.</li>
+                                    <li class="technique-tabs__item">Ситуаций, когда требуется срочная или плановая доставка техники на большие расстояния.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </section>
+        </div>
+    </header>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-grid__brand">
+                    <a class="brand nav__brand" href="#"><span class="brand-left">Kolyan</span><span class="brand-right">Kovsh</span></a>
+                    <h4>ИП Авсянкин Николай Владимирович</h4>
+                </div>
+                <div class="footer-grid__contacts">
+                    <p class="footer-grid-contact-title">Телефон:</p>
+                    <a href="tel:+375298744133" class="footer-grid__number">+375298744133</a>
+                    <p class="footer-grid-contact-title">Почта:</p>
+                    <a href="mailto:kolyankovsh@mail.ru" class="footer-grid__email">kolyankovsh@mail.ru</a>
+                </div>
+                <nav class="footer-grid__navigation">
+                    <ul class="footer-grid__list">
+                        <li class="footer-grid__item">
+                            <a class="footer-grid__link" href="#technique">Техника</a>
+                        </li>
+                        <li class="footer-grid__item">
+                            <a class="footer-grid__link" href="#equipment">Оборудование</a>
+                        </li>
+                        <li class="footer-grid__item">
+                            <a class="footer-grid__link" href="#service">Услуги</a>
+                        </li>
+                        <li class="footer-grid__item">
+                            <a class="footer-grid__link" href="#plan">План работы</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    
+   
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script/formAppearAndHide.js"></script>
+    <script src="script/closeAndOpenScroll.js"></script>
+    <script src="script/tabs.js"></script>
+    <script src="script/validationForm.js"></script>
+    <script src="script/mobileNav.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+    speed: 1000,
+    spaceBetween: 20,
+    loop:true,
+    navigation: {
+      nextEl: '.swiper-technique-next',
+      prevEl: '.swiper-technique-prev',
+    },
+    
+});
+    </script>
+</body>

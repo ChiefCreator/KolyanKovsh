@@ -39,6 +39,13 @@ body{
     background-size: cover;
     background-image: url("../../img/excavator-dark.jpg");
     padding-bottom: 10px;
+    &.header_sm{
+        background-position: center;
+        background-size: cover;
+        background-image: url("../../img/excavator-dark.jpg");
+        padding-bottom: 10px;
+        min-height: auto;
+    }
 }
 
 .nav{
@@ -1448,5 +1455,209 @@ body{
     }
     &:active{
         transform: scale(.9);
+    }
+}
+
+// 
+
+.technique-more{
+    margin: clamp(0rem, -0.852rem + 4.55vw, 3.125rem) 0;
+    color:$base-color-light !important;
+}
+.technique-choice{
+    margin-bottom: 20px;
+    .technique-choice__list{
+        display: grid;
+        grid-template-columns: 12fr;
+        gap:20px;
+        .technique-choice__item{
+            text-align: start;
+            text-wrap: balance;
+            cursor: pointer;
+            transition: all .3s ease;
+            font-size: clamp(1.125rem, 1.006rem + 0.64vw, 1.563rem);
+            font-weight: 500;
+            &.technique-choice__item_act{
+                color: $main-color;
+            }
+        }
+    }
+}
+.technique-tabs{
+    width: 100%;
+    .technique-tabs__content{
+        display: grid;
+        grid-template-columns: 12fr;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        transition: grid-template-rows .3s ease;
+        &.technique-tabs__content_act{
+            grid-template-rows: 1fr;
+        }
+        .technique-tabs__auto-height{
+            width: 100%;
+            min-height: 0;
+            transition: height .3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            &.technique-tabs__auto-height_act{
+                height: auto;
+            }
+        }
+        .technique-tabs__head{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            .technique-tabs__slider{
+                flex: 0 1 400px;
+                height: 300px;
+                .swiper{
+                    width: 100%;
+                    height: 300px;
+                    .swiper-wrapper{
+                        max-width: 400px;
+                        height: 240px;
+                        .swiper-slide{
+                            border-radius: 10px;
+                            overflow: hidden;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: center;
+                            }
+                        }
+                    }
+                    .technique-tabs__slider-btns{
+                        display: flex;
+                        gap: 20px;
+                        justify-content: start;
+                        margin-top: 20px;
+                        .swiper-technique-prev, .swiper-technique-next{
+                            width: 40px;
+                            height: 40px;
+                            background-color: rgba(139, 139, 139, 0.3);
+                            backdrop-filter: blur(2px);
+                            border-radius: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transition: all .3s ease;
+                            cursor: pointer;
+                        }
+                        .swiper-technique-prev:active, .swiper-technique-next:active{
+                            transform: scale(.9);
+                        }
+                        .swiper-technique-prev:hover, .swiper-technique-next:hover{
+                            background-color: rgba(116, 116, 116, 0.3);
+                        }
+                        .swiper-technique-prev::before{
+                            content: '\f053';
+                            font-weight: 900;
+                            font-family: $awesome-font;
+                            font-size: 25px;
+                            color:white;
+                        }
+                        .swiper-technique-next::before{
+                            content: '\f054';
+                            font-weight: 900;
+                            font-family: $awesome-font;
+                            font-size: 25px;
+                            color:white;
+                        }
+                    }
+                }
+            }
+            .technique-tabs__head-title{
+                flex: 1 1 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+                .technique-tabs__title{
+                    font-size: clamp(1.25rem, 0.977rem + 1.45vw, 2.25rem);
+                    text-align: center;
+                }
+                button{
+                    margin: 0 auto;
+                }
+            }
+        }
+        .technique-tabs__text-wrap{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            .technique-tabs__icon{
+                flex: 0 0 40px;
+                height: 40px;
+                background-color: rgba(139, 139, 139, 0.3);
+                backdrop-filter: blur(2px);
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                display: none;
+                &::before{
+                    content: '#';
+                    font-weight: 900;
+                    font-family: $awesome-font;
+                    font-size: 25px;
+                    color: white;
+                }
+            }
+            .technique-tabs__text{
+                flex: 1 1 100%;
+            }
+        }
+        .technique-tabs__advantages{
+            .technique-tabs__item{
+                margin-top: 5px;
+            }
+        }
+        .technique-tabs__subtitle{
+            font-size: 25px;
+        }
+    }
+}
+@media screen and (max-width:920px){
+    .technique-tabs{
+        .technique-tabs__content{
+            .technique-tabs__head{
+                flex-direction: column-reverse;
+                gap: 20px;
+                .technique-tabs__slider{
+                    width: 100%;
+                    flex: 300px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:480px){
+    .technique-tabs{
+        .technique-tabs__content{
+            .technique-tabs__head{
+                align-items: start;
+                .technique-tabs__slider{
+                    width: 300px;
+                    flex: 300px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:380px){
+    .technique-tabs{
+        .technique-tabs__content{
+            .technique-tabs__head{
+                align-items: start;
+                .technique-tabs__slider{
+                    width: 250px;
+                    flex: 300px;
+                }
+            }
+        }
     }
 }

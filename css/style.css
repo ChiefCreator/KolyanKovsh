@@ -46,6 +46,13 @@ body.lock {
   background-image: url("../../img/excavator-dark.jpg");
   padding-bottom: 10px;
 }
+.header.header_sm {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/excavator-dark.jpg");
+  padding-bottom: 10px;
+  min-height: auto;
+}
 
 .nav {
   padding: 30px 0;
@@ -1831,4 +1838,274 @@ body.lock {
 .popup__btn-slide:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+}
+
+.technique-more {
+  margin: clamp(0rem, -0.852rem + 4.55vw, 3.125rem) 0;
+  color: white !important;
+}
+
+.technique-choice {
+  margin-bottom: 20px;
+}
+.technique-choice .technique-choice__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 12fr;
+  grid-template-columns: 12fr;
+  gap: 20px;
+}
+.technique-choice .technique-choice__list .technique-choice__item {
+  text-align: start;
+  text-wrap: balance;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: clamp(1.125rem, 1.006rem + 0.64vw, 1.563rem);
+  font-weight: 500;
+}
+.technique-choice .technique-choice__list .technique-choice__item.technique-choice__item_act {
+  color: rgb(255, 191, 0);
+}
+
+.technique-tabs {
+  width: 100%;
+}
+.technique-tabs .technique-tabs__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 12fr;
+  grid-template-columns: 12fr;
+  -ms-grid-rows: 0fr;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  -webkit-transition: grid-template-rows 0.3s ease;
+  transition: grid-template-rows 0.3s ease;
+  transition: grid-template-rows 0.3s ease, -ms-grid-rows 0.3s ease;
+}
+.technique-tabs .technique-tabs__content > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.technique-tabs .technique-tabs__content.technique-tabs__content_act {
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__auto-height {
+  width: 100%;
+  min-height: 0;
+  -webkit-transition: height 0.3s ease;
+  transition: height 0.3s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__auto-height.technique-tabs__auto-height_act {
+  height: auto;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__slider {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 400px;
+          flex: 0 1 400px;
+  height: 300px;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__slider .swiper {
+  width: 100%;
+  height: 300px;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__slider .swiper .swiper-wrapper {
+  max-width: 400px;
+  height: 240px;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__slider .swiper .swiper-wrapper .swiper-slide {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__slider .swiper .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__slider .swiper .technique-tabs__slider-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-top: 20px;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__slider .swiper .technique-tabs__slider-btns .swiper-technique-prev, .technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__slider .swiper .technique-tabs__slider-btns .swiper-technique-next {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(139, 139, 139, 0.3);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__slider .swiper .technique-tabs__slider-btns .swiper-technique-prev:active, .technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__slider .swiper .technique-tabs__slider-btns .swiper-technique-next:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__slider .swiper .technique-tabs__slider-btns .swiper-technique-prev:hover, .technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__slider .swiper .technique-tabs__slider-btns .swiper-technique-next:hover {
+  background-color: rgba(116, 116, 116, 0.3);
+}
+.technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__slider .swiper .technique-tabs__slider-btns .swiper-technique-prev::before {
+  content: "\f053";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+  font-size: 25px;
+  color: white;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__slider .swiper .technique-tabs__slider-btns .swiper-technique-next::before {
+  content: "\f054";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+  font-size: 25px;
+  color: white;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__head-title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__head-title .technique-tabs__title {
+  font-size: clamp(1.25rem, 0.977rem + 1.45vw, 2.25rem);
+  text-align: center;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__head-title button {
+  margin: 0 auto;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__text-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__text-wrap .technique-tabs__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40px;
+          flex: 0 0 40px;
+  height: 40px;
+  background-color: rgba(139, 139, 139, 0.3);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__text-wrap .technique-tabs__icon::before {
+  content: "#";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+  font-size: 25px;
+  color: white;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__text-wrap .technique-tabs__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__advantages .technique-tabs__item {
+  margin-top: 5px;
+}
+.technique-tabs .technique-tabs__content .technique-tabs__subtitle {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 920px) {
+  .technique-tabs .technique-tabs__content .technique-tabs__head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__slider {
+    width: 100%;
+    -webkit-box-flex: 300px;
+        -ms-flex: 300px;
+            flex: 300px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .technique-tabs .technique-tabs__content .technique-tabs__head {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__slider {
+    width: 300px;
+    -webkit-box-flex: 300px;
+        -ms-flex: 300px;
+            flex: 300px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .technique-tabs .technique-tabs__content .technique-tabs__head {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .technique-tabs .technique-tabs__content .technique-tabs__head .technique-tabs__slider {
+    width: 250px;
+    -webkit-box-flex: 300px;
+        -ms-flex: 300px;
+            flex: 300px;
+  }
 }
