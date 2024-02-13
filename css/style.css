@@ -1234,13 +1234,23 @@ body.lock {
             transform: rotate(90deg) !important;
   }
 }
+.feedback {
+  background: url("./../../img/feedback-bg-dark.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 100px;
+  padding: 50px 0;
+}
+
 .feedback-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 7.5fr 20px 4.5fr;
-  grid-template-columns: 7.5fr 4.5fr;
+  -ms-grid-columns: auto 20px 1fr;
+  grid-template-columns: auto 1fr;
   gap: 20px;
   margin: 100px 0;
+  color: white;
 }
 
 .wrap-feedback {
@@ -1252,8 +1262,8 @@ body.lock {
 }
 .wrap-feedback .wrap-feedback__content {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1263,37 +1273,24 @@ body.lock {
           flex-direction: column;
 }
 .wrap-feedback .wrap-feedback__content .wrap-feedback__title {
-  font-size: 30px;
+  font-size: 35px;
   max-width: 500px;
   text-wrap: balance;
-  font-weight: 500;
+  font-weight: 700;
 }
 .wrap-feedback .wrap-feedback__content .wrap-feedback__title.wrap-feedback__title-2 {
   margin-top: 10px;
+  font-weight: 700;
 }
 .wrap-feedback .wrap-feedback__content .wrap-feedback__text {
   margin-top: 20px;
   font-size: 18px;
+  max-width: 600px;
+  font-weight: 500;
 }
 .wrap-feedback .wrap-feedback__content .wrap-feedback__btn {
   margin-top: auto;
   margin-right: auto;
-}
-.wrap-feedback .wrap-feedback__img {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 400px;
-          flex: 0 1 400px;
-  height: 400px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.wrap-feedback .wrap-feedback__img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
 }
 
 .accordion {
@@ -1308,7 +1305,9 @@ body.lock {
 }
 .accordion .accordion__item {
   width: 100%;
-  background-color: gainsboro;
+  background-color: rgba(139, 139, 139, 0.3);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   border-radius: 10px;
   height: auto;
 }
@@ -1335,7 +1334,7 @@ body.lock {
 .accordion .accordion__item .accordion__head .accordion__icon::before {
   content: "\f054";
   font-size: 25px;
-  color: black;
+  color: white;
   font-weight: 900;
   font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
 }
